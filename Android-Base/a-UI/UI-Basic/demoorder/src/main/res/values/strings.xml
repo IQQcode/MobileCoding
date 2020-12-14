@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">demoorder</string>
+    <string name="start_select">开始选餐</string>
+    <string name="edit_input_hint_name">请输入姓名</string>
+    <string name="text_view_name">姓名: </string>
+    <string name="sex">性别</string>
+    <string name="male">男</string>
+    <string name="female">女</string>
+    <string name="hobby">喜好</string>
+    <string name="hot">辣</string>
+    <string name="fish">海鲜</string>
+    <string name="sour">酸</string>
+    <string name="budget">预算</string>
+    <string name="start_price">0元</string>
+    <string name="end_price">100元</string>
+    <string name="search_for_dishes">寻找菜品</string>
+    <string name="next">下一个</string>
+    <string name="show_information">显示信息</string>
 </resources>
