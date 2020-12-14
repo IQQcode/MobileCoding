@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">controlview</string>
+    <string name="long_txt">
+        Kotlin 通常被视为下一个 Java，它是由谷歌和 JetBrains（Android Studio 开发者）赞助的。Java 从一开始就一直是 Android 应用的首选开发语言，但近年来 Kotlin 迅速普及，如今在 10,000 种 Google Play 应用中有近 60％使用了 Kotlin 。虽说在少数需要访问底层原生代码的情况下，仍会继续使用 C++；但在其他情况下，Kotlin 都可以代替 Java。Kotlin 的主要优势是与 Java 的完全互操作性，这意味着开发人员可以尽可能迁移旧代码，而不用完全重写整个应用程序。这两种语言兼容得很好，Android Studio 甚至可以自动从 Java 转换为 Kotlin。这种兼容性，加上更简洁的语法和数百项细小改进，使 Kotlin 在 StackOverflow 的 2019 年开发人员调查中成为第四大“最受欢迎”和第五大“想要”的编程语言，在所有移动编程语言中排名最高。迁移现有应用有一个好方法，就是在修改现有 Java 文件时将其转换为 Kotlin。虽然这意味着你要把经常编辑的文件转换过去，会增加代码审查的复杂度（比如会面临潜在的冲突），但由于转换后的区域能得到审查，因此可以确保任何问题都能被发现。目前 Candyspace 中使用的 Kotlin 代码占 86％（并且一直在增长），其余的 14％是实用工具 / 转换代码，这些代码已经有些年头没改动过了。谷歌的 AndroidX/Jetpack 库是一组实用工具，旨在简化常见的应用需求。例如用于设备上数据库的 Room ，或用来在底层数据更改时更新显示内容的 LiveData 。有了 Jetpack 库，新项目就省掉了重新发明轮子的麻烦，也不必等待其他开发人员来开源他们的实现方式，现在每位开发者都能获取到那些基础要素了。这些库更新非常频繁，新功能不断推出，错误修复也会及时发布。由于这些库是为了协同工作而构建的，因此多使用 AndroidX 库有助于最大程度地减少应用中出现意外。
+    </string>
+    <string name="iqqcode">
+        这是iqqcode
+    </string>
+</resources>

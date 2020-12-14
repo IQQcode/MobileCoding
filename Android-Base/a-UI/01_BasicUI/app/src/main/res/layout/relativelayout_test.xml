@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <!--
+        android:layout_centerInParent    正中位置
+        android:layout_alignParentLeft   左上
+        android:layout_alignParentRight  右上
+        android:layout_alignParentTop    顶部(偏左)
+        android:layout_alignParentBottom 底部(偏左)
+        android:layout_centerVertical    中部(偏左)
+        android:layout_centerHorizontal  顶部中间
+    -->
+
+    <TextView
+        android:id="@+id/center"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="正中"
+        android:textSize="25sp"
+        android:background="#FF0000"
+        android:layout_centerInParent="true"/>
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="左上"
+        android:textSize="25sp"
+        android:background="#00FF00"
+        android:layout_toLeftOf="@id/center"
+        android:layout_above="@id/center"/>
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="右上"
+        android:textSize="25sp"
+        android:background="#0000FF"
+        android:layout_toRightOf="@id/center"
+        android:layout_above="@id/center"/>
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="左下"
+        android:textSize="25sp"
+        android:background="#EA78FF"
+        android:layout_toLeftOf="@id/center"
+        android:layout_below="@id/center"/>
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="右下"
+        android:textSize="25sp"
+        android:background="#00ACFF"
+        android:layout_toRightOf="@id/center"
+        android:layout_below="@id/center"/>
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:background="#6ff9c1"
+        android:layout_alignBottom="@id/center"/>
+
+</RelativeLayout>
