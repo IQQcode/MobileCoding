@@ -54,7 +54,7 @@ public class ButtonActivity extends AppCompatActivity implements View.OnClickLis
     // 4.在XML布局文件中添加点击事件属性
     //被点击的控件对象
     public void myClick(View v) {
-        switch(v.getId()) {
+        switch (v.getId()) {
             case R.id.btn4:
                 Log.e("TAG", "btn4通过XML绑定的点击事件...");
                 break;
