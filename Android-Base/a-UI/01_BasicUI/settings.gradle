@@ -1,6 +1,0 @@
-include ':demoorder'
-include ':viewbasic'
-include ':layoutdemo'
-include ':controlview'
-include ':app'
-rootProject.name = "UI-Basic"

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    tools:context=".SingleTopActivity"
+    android:background="#ff6b81">
+
+    <TextView
+        android:id="@+id/tv_tittle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:text="SingleTopActivity"
+        android:textStyle="bold"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/tv_taskId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_tittle"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="85dp"
+        android:text="***TaskID："
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_previous"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_taskId"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="85dp"
+        android:text="Previous："
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_hashcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_previous"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="85dp"
+        android:text="***hashcode："
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btn_singleTop_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_hashcode"
+        android:layout_marginTop="30dp"
+        android:text="MainActivity"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:background="#2ecc71"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_singleTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_singleTop_main"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:text="SingleTop"
+        android:textAllCaps="false" />
+
+
+</RelativeLayout>
