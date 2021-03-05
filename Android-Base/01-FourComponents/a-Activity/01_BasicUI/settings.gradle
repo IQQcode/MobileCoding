@@ -1,0 +1,10 @@
+include ':callmessage'
+include ':myapplication'
+include ':activitylife'
+include ':hellodemo'
+include ':demoorder'
+include ':viewbasic'
+include ':layoutdemo'
+include ':controlview'
+include ':app'
+rootProject.name = "UI-Basic"
