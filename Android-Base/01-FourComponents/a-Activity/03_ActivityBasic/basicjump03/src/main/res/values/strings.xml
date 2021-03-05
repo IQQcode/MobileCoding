@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BasicJump03</string>
+    <string name="button">一般跳转</string>
+    <string name="button2">隐式回调跳转</string>
+    <string name="button_return">return</string>
+    <string name="button2_return">带结果return</string>
+    <string name="please_to_enter">Please to enter</string>
+</resources>

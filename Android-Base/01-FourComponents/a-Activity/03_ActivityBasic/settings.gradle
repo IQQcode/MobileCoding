@@ -1,0 +1,4 @@
+include ':basicjump03'
+include ':activityforresult02'
+include ':app'
+rootProject.name = "03_ActivityBasic"

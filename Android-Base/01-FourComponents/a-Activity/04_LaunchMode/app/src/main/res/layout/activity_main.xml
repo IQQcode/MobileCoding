@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_tittle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="MainActivity"
+        android:textStyle="bold"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/tv_taskId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_tittle"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="85dp"
+        android:text="***TaskID："
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_previous"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_taskId"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="85dp"
+        android:text="***Previous："
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_hashcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_previous"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="85dp"
+        android:text="***hashcode："
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btn_standard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_hashcode"
+        android:layout_marginTop="30dp"
+        android:text="Standard"
+        android:textColor="@color/white"
+        android:background="#2ecc71"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_singleTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_standard"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:background="#ff6b81"
+        android:text="SingleTop"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_singleTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_singleTop"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:background="#ff7f50"
+        android:text="SingleTask"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_taskAffinity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_singleTask"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:background="#f9e459"
+        android:text="TaskAffinity"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_singleInstance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_taskAffinity"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:background="#70a1ff"
+        android:text="SingleInstance"
+        android:textAllCaps="false" />
+
+
+</RelativeLayout>

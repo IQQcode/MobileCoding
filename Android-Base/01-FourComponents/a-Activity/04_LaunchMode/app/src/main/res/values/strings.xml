@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">04_LaunchMode</string>
+    <string name="bg_color">#ff00ff</string>
+</resources>

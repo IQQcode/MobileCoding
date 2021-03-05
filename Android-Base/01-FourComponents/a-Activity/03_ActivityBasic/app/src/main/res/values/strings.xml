@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">03_ActivityBasic</string>
+    <string name="mainactivity">MainActivity跳转</string>
+    <string name="context_goto">Context跳转</string>
+    <string name="action_goto">『方式二』Action跳转</string>
+    <string name="second_activity">SecondActivity🎨</string>
+    <string name="goToMain">返回Main</string>
+    <string name="context_goto_other">GOTO</string>
+</resources>
