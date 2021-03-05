@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingLeft="20dp"
+    android:paddingTop="100dp"
+    android:paddingRight="20dp"
+    tools:context=".MainActivity2">
+
+    <TextView
+        android:id="@+id/tv_main2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MainActivity2"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/btn_second"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_main2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/btn_bg_second"
+        android:text="SecondActivity"
+        android:textSize="18sp"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:onClick="xmlOnClick"/>
+
+    <Button
+        android:id="@+id/btn_third"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_second"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_bg_third"
+        android:text="ThirdActivity"
+        android:textSize="18sp"
+        android:textAllCaps="false"
+        android:textColor="#747d8c" />
+
+    <Button
+        android:id="@+id/btn_fourth"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_third"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_selector_fourth"
+        android:text="FourthActivity"
+        android:textSize="18sp"
+        android:textAllCaps="false"
+        android:textColor="#747d8c" />
+
+    <Button
+        android:id="@+id/btn_fifth"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_fourth"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_selector_fifth"
+        android:text="FourthActivity"
+        android:textSize="18sp"
+        android:textAllCaps="false"
+        android:textColor="#747d8c" />
+
+</RelativeLayout>

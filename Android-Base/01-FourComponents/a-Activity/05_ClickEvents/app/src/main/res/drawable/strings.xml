@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">05_ClickEvent</string>
+    <string name="hint_username">username</string>
+    <string name="hint_password">password</string>
+    <string name="checkbox_re">remember</string>
+    <string name="button_cancel">cannel</string>
+</resources>
