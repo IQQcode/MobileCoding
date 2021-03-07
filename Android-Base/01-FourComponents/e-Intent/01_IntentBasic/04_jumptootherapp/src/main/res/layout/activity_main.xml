@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="70dp"
+    android:background="#7bed9f">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="APP1"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/btn_jumpToAPP2_package"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Package"
+        android:textSize="20dp"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:layout_marginTop="100dp"
+        android:layout_below="@id/tv_title"/>
+
+    <Button
+        android:id="@+id/btn_jumpToAPP2_action"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Action"
+        android:textSize="20dp"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/btn_jumpToAPP2_package"/>
+
+    <Button
+        android:id="@+id/btn_jumpToAPP2_uri"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Uri"
+        android:textSize="20dp"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/btn_jumpToAPP2_action"/>
+
+</RelativeLayout>

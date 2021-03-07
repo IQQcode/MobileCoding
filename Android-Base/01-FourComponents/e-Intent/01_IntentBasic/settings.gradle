@@ -1,0 +1,6 @@
+include ':05_app2'
+include ':04_jumptootherapp'
+include ':03_intentforresult'
+include ':02_transferobject'
+include ':app'
+rootProject.name = "01_IntentBasic"

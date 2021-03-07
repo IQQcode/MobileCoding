@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">01_IntentBasic</string>
+    <string name="erp_employee">请输入员工信息：</string>
+</resources>
