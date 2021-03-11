@@ -1,2 +1,5 @@
+include ':activitieslifecycle'
+include ':twoactivitieslifecycle'
+include ':twoActivitiesLifecycle'
 include ':app'
 rootProject.name = "06_ActivityLife"

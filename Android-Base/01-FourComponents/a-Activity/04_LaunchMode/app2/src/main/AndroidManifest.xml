@@ -12,7 +12,8 @@
         <activity android:name=".MainActivity"
             android:label="APP2"
             android:exported="true"
-            android:taskAffinity="com.iqqcode.launchmode.affinity.DEFAULT">
+            android:taskAffinity="com.iqqcode.launchmode.affinity.DEFAULT"
+            android:finishOnTaskLaunch="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

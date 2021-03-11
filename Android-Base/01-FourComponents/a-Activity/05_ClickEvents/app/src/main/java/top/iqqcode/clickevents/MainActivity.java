@@ -81,6 +81,9 @@ public class MainActivity extends Activity {
         }
     }
 
+    /**
+     * 【Button点击事件四】当前类实现接口
+     */
     private OnClickListener onClickListener = new OnClickListener() {
 
         @Override

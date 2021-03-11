@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="40dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_tittle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="ProgressBar"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/eton_placeholder"
+        android:layout_width="10dp"
+        android:layout_height="0dp"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/btn01"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_tittle"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="40dp"
+        android:layout_toLeftOf="@id/eton_placeholder"
+        android:gravity="center"
+        android:text="BarA"
+        android:textAllCaps="false"
+        android:textSize="25dp" />
+
+    <Button
+        android:id="@+id/btn02"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_tittle"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="40dp"
+        android:layout_toRightOf="@id/eton_placeholder"
+        android:gravity="center"
+        android:text="BarB"
+        android:textAllCaps="false"
+        android:textSize="25dp" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/btn02" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progress_bar01"
+        android:layout_marginTop="30dp"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:max="100" />
+
+</RelativeLayout>

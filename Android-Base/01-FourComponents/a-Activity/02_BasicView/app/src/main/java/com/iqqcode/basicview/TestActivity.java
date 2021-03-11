@@ -33,7 +33,7 @@ public class TestActivity extends AppCompatActivity {
                 // Activity间的跳转，点击按钮跳转新的Activity
 
                 //从当前TestActivity跳转到新NewActivity中去
-                Intent intent = new Intent(TestActivity.this, NewActivity.class);
+                Intent intent = new Intent(TestActivity.this, MainActivity.class);
                 startActivity(intent);
             }
         });

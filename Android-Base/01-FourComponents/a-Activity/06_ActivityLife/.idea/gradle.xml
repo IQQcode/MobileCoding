@@ -12,7 +12,10 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/activitieslifecycle" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/twoActivitiesLifecycle" />
+            <option value="$PROJECT_DIR$/twoactivitieslifecycle" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
