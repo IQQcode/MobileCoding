@@ -1,0 +1,5 @@
+include ':04_BaseAdapter'
+include ':03_BaseAdapter'
+include ':02_SimpleAdapter'
+include ':01_ArrayAdapter'
+rootProject.name = "ListViews"

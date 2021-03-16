@@ -9,11 +9,12 @@ import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 /**
  * @Author: iqqcode
  * @Date: 2021/3/8
- * @Description:对话框
+ * @Description:显示一般AlertDialog
  */
 public class MainActivity extends Activity {
 
@@ -26,8 +27,8 @@ public class MainActivity extends Activity {
         findViewById(R.id.btn_alert).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AlertDialog.Builder dialog = new AlertDialog.Builder(MainActivity.
-                        this);
+                // 没有公开的构造方法，只能通过内部类Builder来创建
+                AlertDialog.Builder dialog = new AlertDialog.Builder(MainActivity.this);
                 dialog.setTitle("This is Dialog");
                 dialog.setMessage("Something important.");
                 dialog.setCancelable(false);
@@ -36,7 +37,7 @@ public class MainActivity extends Activity {
                 dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-
+                        Toast.makeText(MainActivity.this, "确认", 0).show();
                     }
                 });
 
@@ -44,7 +45,7 @@ public class MainActivity extends Activity {
                 dialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-
+                        Toast.makeText(MainActivity.this, "取消", 0).show();
                     }
                 });
 

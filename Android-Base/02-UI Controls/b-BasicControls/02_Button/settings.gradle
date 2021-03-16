@@ -1,2 +1,3 @@
+include ':EditTextDemo'
 include ':app'
 rootProject.name = "02_Button"

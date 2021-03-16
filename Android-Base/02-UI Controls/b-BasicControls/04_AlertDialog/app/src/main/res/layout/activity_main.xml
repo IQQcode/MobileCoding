@@ -1,30 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="40dp"
-    tools:context=".MainActivity"
-    android:background="#2ecc71">
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/tv_tittle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
         android:text="MainActivity"
         android:textColor="@color/white"
-        android:textStyle="bold"
-        android:layout_marginTop="100dp"
-        android:textSize="35sp" />
+        android:textSize="35sp"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/btn_alert"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_tittle"
-        android:layout_marginTop="200dp"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
         android:text="AlertDialog"
         android:textAllCaps="false"
         android:textColor="@color/white"
@@ -35,12 +32,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/btn_alert"
-        android:layout_marginTop="30dp"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
         android:text="ProgressDialog"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="20dp" />
 
-
-</RelativeLayout>
+</LinearLayout>

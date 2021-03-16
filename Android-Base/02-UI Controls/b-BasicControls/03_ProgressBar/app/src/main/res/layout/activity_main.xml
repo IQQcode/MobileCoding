@@ -49,20 +49,45 @@
         android:textAllCaps="false"
         android:textSize="25dp" />
 
+
     <ProgressBar
         android:id="@+id/progress_bar01"
+        style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/btn02"
         android:layout_marginTop="30dp"
-        android:layout_below="@id/btn02" />
+        android:max="100" />
 
     <ProgressBar
         android:id="@+id/progress_bar02"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/progress_bar01"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="30dp" />
+
+
+    <TextView
+        android:id="@+id/tv_more"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progress_bar02"
+        android:layout_marginTop="50dp"
+        android:text="1.滑动下面的滑杆后，上面的进度条会同步 \n2.滑动到最大值时，最上面的进度条消失" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar03"
         style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_more"
+        android:layout_marginTop="30dp"
         android:max="100" />
 
+    <SeekBar
+        android:id="@+id/sb_progress_loading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/progress_bar03"
+        android:layout_marginTop="50dp" />
 </RelativeLayout>

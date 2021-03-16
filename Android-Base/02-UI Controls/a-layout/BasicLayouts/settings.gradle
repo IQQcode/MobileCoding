@@ -1,2 +1,3 @@
+include ':02_RelativeLayout'
 include ':01_LinearLayout'
 rootProject.name = "BasicLayouts"
