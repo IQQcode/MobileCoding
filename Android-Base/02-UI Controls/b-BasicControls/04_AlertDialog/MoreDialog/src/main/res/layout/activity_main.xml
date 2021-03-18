@@ -18,6 +18,22 @@
         android:textAllCaps="false" />
 
     <Button
+        android:id="@+id/btn_test4_lb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="showLB"
+        android:text="显示单选文字列表"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_test4_ml"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="showML"
+        android:text="多选文字列表"
+        android:textAllCaps="false" />
+
+    <Button
         android:id="@+id/btn_test4_ld"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

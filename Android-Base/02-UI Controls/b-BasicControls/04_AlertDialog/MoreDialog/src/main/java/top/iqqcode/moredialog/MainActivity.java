@@ -1,6 +1,8 @@
 package top.iqqcode.moredialog;
 
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -44,12 +46,12 @@ public class MainActivity extends Activity {
         // new AlertDialog.Builder(this).create().show();
         // 链式调用
         new AlertDialog.Builder(this)
-                .setTitle("删除数据") //设置标题
+                .setTitle("消息提示") //设置标题
                 .setMessage("你确定删除数据吗")
-                .setPositiveButton("删除", new DialogInterface.OnClickListener() {
+                .setPositiveButton("确认", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(MainActivity.this, "删除数据", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "确认删除数据", Toast.LENGTH_SHORT).show();
                     }
                 })
                 .setNegativeButton("取消", new DialogInterface.OnClickListener() {
@@ -61,8 +63,69 @@ public class MainActivity extends Activity {
                 .show();
     }
 
+
     /**
-     * 显示单选列表AlertDialog
+     * 单选item列表
+     *
+     * @param v
+     */
+    public void showLB(View v) {
+        // final的变量在方法执行完后还存在(拷贝一封放到常量池中) [作用域]
+        // 对话框点击完消失之后该对象被回收，但是Toast才显示
+        final String[] items = {"Java", "Kotlin", "RxJava", "Flutter", "React Native"};
+        new AlertDialog.Builder(this)
+                .setTitle("Android开发")
+                .setIcon(R.mipmap.ic_launcher_round)
+                .setItems(items, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // 提示颜色
+                        Toast.makeText(MainActivity.this, items[which], Toast.LENGTH_SHORT).show();
+                        //移除dilaog
+                        dialog.dismiss();
+                    }
+                })
+                .show();
+    }
+
+
+    /**
+     * 多选列表
+     *
+     * @param v
+     */
+
+    List<Integer> list = new ArrayList<Integer>();
+
+    public void showML(View v) {
+        final String[] items = {"Java", "Kotlin", "RxJava", "Flutter", "React Native"};
+        boolean[] choice = new boolean[]{false, false, false, false, false, false};
+        new AlertDialog.Builder(this)
+                .setTitle("Android开发")
+                .setIcon(R.mipmap.ic_launcher_round)
+                .setMultiChoiceItems(items, choice, new DialogInterface.OnMultiChoiceClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which, boolean isChecked) {
+                        if (isChecked) {
+                            list.add(which);
+                        } else {
+                            list.remove(which);
+                        }
+                        // 提示颜色
+                        Toast.makeText(MainActivity.this, "选择是:" + list.toString(), Toast.LENGTH_SHORT).show();
+                    }
+                })
+                .setPositiveButton("确认", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(MainActivity.this, list.toString(), Toast.LENGTH_SHORT).show();
+                    }
+                })
+                .show();
+    }
+
+    /**
+     * 显示单选RadioButton列表
      *
      * @param v
      */
@@ -84,7 +147,7 @@ public class MainActivity extends Activity {
     }
 
     /**
-     * 显示自定义AlertDialog
+     * 显示自定义Al ertDialog
      *
      * @param v
      */
@@ -226,6 +289,7 @@ public class MainActivity extends Activity {
 
     /**
      * 分秒
+     *
      * @param v
      */
     public void showTimeAD(View v) {
@@ -239,5 +303,25 @@ public class MainActivity extends Activity {
                 Log.e("TAG", hour + " : " + minute);
             }
         }, hour, minute, true).show();
+    }
+
+
+    /**
+     * 案例：实现程序退出确认框
+     */
+    @Override
+    public void onBackPressed() {
+        new AlertDialog.Builder(this)
+                .setIcon(R.mipmap.ic_launcher_round)
+                .setTitle("🎨确认退出吗，亲亲~")
+                .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        finish();
+                    }
+                })
+                .setNegativeButton("不走了", null)
+                .show();
     }
 }

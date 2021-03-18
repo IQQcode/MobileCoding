@@ -12,6 +12,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/activitieslifecycle" />
+            <option value="$PROJECT_DIR$/activitytest" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/twoActivitiesLifecycle" />
             <option value="$PROJECT_DIR$/twoactivitieslifecycle" />

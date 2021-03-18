@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -25,9 +26,16 @@ public class MyAdapter extends BaseAdapter {
     // 反射器: 将item的XML布局文件反射成为View
     LayoutInflater inflater;
 
+    // 接口类型的引用
+    IClickButton clickItemButton;
+
     public MyAdapter(Context context) {
         // 初始化上下文
         this.inflater = LayoutInflater.from(context);
+    }
+
+    public void setClickButton(IClickButton clickItemButton) {
+        this.clickItemButton = clickItemButton;
     }
 
     public List<Map<String, Object>> getList() {
@@ -40,7 +48,8 @@ public class MyAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return list.size();
+        // 避免空指针
+        return list != null ? list.size() : 0;
     }
 
     @Override
@@ -93,16 +102,21 @@ public class MyAdapter extends BaseAdapter {
         }
 
         // 每个item加载的内容是不同的，所以需要重复获取(无法优化)
+
+//        DataModel dataModel = list.get(position);
+//        holder.app_name.setText(dataModel.get("title"));
+
         holder.logo.setImageResource((Integer) list.get(position).get("logo"));
         holder.app_name.setText((String) list.get(position).get("title"));
         holder.app_version.setText((String) list.get(position).get("version"));
         holder.app_package.setText((String) list.get(position).get("size"));
 
+        // item中Button的点击事件
         Button btn = convertView.findViewById(R.id.btn);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.i("spl", "点击");
+                clickItemButton.clickButton(position);
             }
         });
 

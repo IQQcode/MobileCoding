@@ -1,0 +1,2 @@
+include ':Demo01_basic'
+rootProject.name = "ListViewTest"

@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 import java.util.*;
 
-public class MainActivity extends Activity implements AdapterView.OnItemClickListener, AdapterView.OnItemLongClickListener {
+public class MainActivity extends Activity implements AdapterView.OnItemClickListener, AdapterView.OnItemLongClickListener, IClickButton {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -208,6 +208,7 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
         // 3. 配置适配器
         MyAdapter adapter = new MyAdapter(this);
         adapter.setList(list);
+        adapter.setClickButton(this);
 
         //4. 关联适配器
         listview.setAdapter(adapter);
@@ -235,5 +236,16 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
     public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
         Toast.makeText(this, "长按item" + position, Toast.LENGTH_SHORT).show();
         return true; // 消化该点击事件
+    }
+
+
+    /**
+     * item Button的点击事件
+     *
+     * @param position
+     */
+    @Override
+    public void clickButton(int position) {
+        startActivity(new Intent(MainActivity.this, UninstallActivity.class));
     }
 }
