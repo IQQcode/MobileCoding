@@ -14,7 +14,99 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f386cac3-7114-4e62-934b-cd24538ec38f" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/../../../01-FourComponents/a-Activity/06_ActivityLife/activitytest/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../01-FourComponents/a-Activity/06_ActivityLife/activitytest/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../01-FourComponents/a-Activity/06_ActivityLife/activitytest/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../01-FourComponents/a-Activity/06_ActivityLife/activitytest/src/androidTest/java/top/iqqcode/activitytest/ExampleInstrumentedTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../01-FourComponents/a-Activity/06_ActivityLife/activitytest/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../01-FourComponents/a-Activity/06_ActivityLife/activitytest/src/main/java/top/iqqcode/activitytest/BaseActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../01-FourComponents/a-Activity/06_ActivityLife/activitytest/src/main/java/top/iqqcode/activitytest/MainActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../01-FourComponents/a-Activity/06_ActivityLife/activitytest/src/main/java/top/iqqcode/activitytest/SecondActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../01-FourComponents/a-Activity/06_ActivityLife/activitytest/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../01-FourComponents/a-Activity/06_ActivityLife/activitytest/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../01-FourComponents/a-Activity/06_ActivityLife/activitytest/src/main/res/layout/activity_base.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../01-FourComponents/a-Activity/06_ActivityLife/activitytest/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../01-FourComponents/a-Activity/06_ActivityLife/activitytest/src/main/res/layout/activity_second.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../01-FourComponents/a-Activity/06_ActivityLife/activitytest/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../01-FourComponents/a-Activity/06_ActivityLife/activitytest/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../01-FourComponents/a-Activity/06_ActivityLife/activitytest/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../01-FourComponents/a-Activity/06_ActivityLife/activitytest/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../01-FourComponents/a-Activity/06_ActivityLife/activitytest/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../01-FourComponents/a-Activity/06_ActivityLife/activitytest/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../01-FourComponents/a-Activity/06_ActivityLife/activitytest/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../01-FourComponents/a-Activity/06_ActivityLife/activitytest/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../01-FourComponents/a-Activity/06_ActivityLife/activitytest/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../01-FourComponents/a-Activity/06_ActivityLife/activitytest/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../01-FourComponents/a-Activity/06_ActivityLife/activitytest/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../01-FourComponents/a-Activity/06_ActivityLife/activitytest/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../01-FourComponents/a-Activity/06_ActivityLife/activitytest/src/main/res/values-night/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../01-FourComponents/a-Activity/06_ActivityLife/activitytest/src/main/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../01-FourComponents/a-Activity/06_ActivityLife/activitytest/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../01-FourComponents/a-Activity/06_ActivityLife/activitytest/src/main/res/values/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../01-FourComponents/a-Activity/06_ActivityLife/activitytest/src/test/java/top/iqqcode/activitytest/ExampleUnitTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ListViewTest/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ListViewTest/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ListViewTest/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ListViewTest/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ListViewTest/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ListViewTest/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ListViewTest/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ListViewTest/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ListViewTest/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ListViewTest/Demo01_basic/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ListViewTest/Demo01_basic/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ListViewTest/Demo01_basic/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ListViewTest/Demo01_basic/src/androidTest/java/top/iqqcode/listviewtest/ExampleInstrumentedTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ListViewTest/Demo01_basic/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ListViewTest/Demo01_basic/src/main/java/top/iqqcode/listviewtest/MainActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ListViewTest/Demo01_basic/src/main/java/top/iqqcode/listviewtest/MyAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ListViewTest/Demo01_basic/src/main/java/top/iqqcode/listviewtest/NewsModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ListViewTest/Demo01_basic/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ListViewTest/Demo01_basic/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ListViewTest/Demo01_basic/src/main/res/drawable/item_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ListViewTest/Demo01_basic/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ListViewTest/Demo01_basic/src/main/res/layout/item_view.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ListViewTest/Demo01_basic/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ListViewTest/Demo01_basic/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ListViewTest/Demo01_basic/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ListViewTest/Demo01_basic/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ListViewTest/Demo01_basic/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ListViewTest/Demo01_basic/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ListViewTest/Demo01_basic/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ListViewTest/Demo01_basic/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ListViewTest/Demo01_basic/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ListViewTest/Demo01_basic/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ListViewTest/Demo01_basic/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ListViewTest/Demo01_basic/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ListViewTest/Demo01_basic/src/main/res/values-night/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ListViewTest/Demo01_basic/src/main/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ListViewTest/Demo01_basic/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ListViewTest/Demo01_basic/src/main/res/values/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ListViewTest/Demo01_basic/src/test/java/top/iqqcode/listviewtest/ExampleUnitTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ListViewTest/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ListViewTest/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ListViewTest/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ListViewTest/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ListViewTest/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ListViewTest/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ListViewTest/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04_BaseAdapter/src/main/java/top/iqqcode/baseadapter/IClickButton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04_BaseAdapter/src/main/java/top/iqqcode/baseadapter/UninstallActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04_BaseAdapter/src/main/res/layout/activity_uninstall.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../01-FourComponents/a-Activity/06_ActivityLife/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../01-FourComponents/a-Activity/06_ActivityLife/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../01-FourComponents/a-Activity/06_ActivityLife/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../../01-FourComponents/a-Activity/06_ActivityLife/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../b-BasicControls/04_AlertDialog/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../b-BasicControls/04_AlertDialog/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../b-BasicControls/04_AlertDialog/MoreDialog/src/main/java/top/iqqcode/moredialog/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../b-BasicControls/04_AlertDialog/MoreDialog/src/main/java/top/iqqcode/moredialog/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../b-BasicControls/04_AlertDialog/MoreDialog/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../b-BasicControls/04_AlertDialog/MoreDialog/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_BaseAdapter/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/04_BaseAdapter/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_BaseAdapter/src/main/java/top/iqqcode/baseadapter/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/04_BaseAdapter/src/main/java/top/iqqcode/baseadapter/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_BaseAdapter/src/main/java/top/iqqcode/baseadapter/MyAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/04_BaseAdapter/src/main/java/top/iqqcode/baseadapter/MyAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_BaseAdapter/src/main/res/layout/activity_second.xml" beforeDir="false" afterPath="$PROJECT_DIR$/04_BaseAdapter/src/main/res/layout/activity_second.xml" afterDir="false" />
+>>>>>>> 7020f95802514c3818c52478095a30454a5b6a60
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
