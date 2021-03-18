@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity"
-    android:padding="25dp">
+    android:padding="25dp"
+    tools:context=".MainActivity">
 
     <!-- AlertDialog -->
     <Button
@@ -15,6 +15,22 @@
         android:layout_height="wrap_content"
         android:onClick="showAD"
         android:text="显示一般AlertDialog"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_test4_lb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="showLB"
+        android:text="显示单选文字列表"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_test4_ml"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="showML"
+        android:text="多选文字列表"
         android:textAllCaps="false" />
 
     <Button
@@ -29,10 +45,19 @@
         android:id="@+id/btn_test4_custom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+
         android:onClick="showCD"
-        android:text="显示自定义AlertDialog"
+        android:text="显示自定义AlertDialog-01"
         android:textAllCaps="false" />
 
+    <Button
+        android:id="@+id/btn_test4_custom02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="showCD02"
+        android:text="显示自定义AlertDialog-02"
+        android:textAllCaps="false" />
 
     <!-- ProgressDialog -->
     <Button
@@ -69,6 +94,25 @@
         android:layout_height="wrap_content"
         android:onClick="showTimeAD"
         android:text="显示TimePickerDialog"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:onClick="activityBtn"
+        android:text="Activity-Dialog"
+        android:textAllCaps="false" />
+
+
+    <Button
+        android:id="@+id/btn_popup_window"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:onClick="popupWindowBtn"
+        android:text="PopupWindow"
         android:textAllCaps="false" />
 
 </LinearLayout>
