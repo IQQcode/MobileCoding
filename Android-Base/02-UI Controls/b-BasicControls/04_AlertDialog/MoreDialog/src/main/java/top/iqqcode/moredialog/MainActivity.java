@@ -94,7 +94,6 @@ public class MainActivity extends Activity {
     }
 
 
-<<<<<<< HEAD
     /**
      * 多选列表
      *
@@ -130,45 +129,8 @@ public class MainActivity extends Activity {
                 .show();
     }
 
-    /**
-=======
-    /**
-     * 多选列表
-     *
-     * @param v
-     */
-
-    List<Integer> list = new ArrayList<Integer>();
-
-    public void showML(View v) {
-        final String[] items = {"Java", "Kotlin", "RxJava", "Flutter", "React Native"};
-        boolean[] choice = new boolean[]{false, false, false, false, false, false};
-        new AlertDialog.Builder(this)
-                .setTitle("Android开发")
-                .setIcon(R.mipmap.ic_launcher_round)
-                .setMultiChoiceItems(items, choice, new DialogInterface.OnMultiChoiceClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which, boolean isChecked) {
-                        if (isChecked) {
-                            list.add(which);
-                        } else {
-                            list.remove(which);
-                        }
-                        // 提示颜色
-                        Toast.makeText(MainActivity.this, "选择是:" + list.toString(), Toast.LENGTH_SHORT).show();
-                    }
-                })
-                .setPositiveButton("确认", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(MainActivity.this, list.toString(), Toast.LENGTH_SHORT).show();
-                    }
-                })
-                .show();
-    }
 
     /**
->>>>>>> 7020f95802514c3818c52478095a30454a5b6a60
      * 显示单选RadioButton列表
      *
      * @param v
@@ -191,11 +153,8 @@ public class MainActivity extends Activity {
     }
 
     /**
-<<<<<<< HEAD
      * 显示自定义AlertDialog-01
-=======
      * 显示自定义Al ertDialog
->>>>>>> 7020f95802514c3818c52478095a30454a5b6a60
      *
      * @param v
      */
@@ -402,7 +361,6 @@ public class MainActivity extends Activity {
                 .setNegativeButton("不走了", null)
                 .show();
     }
-<<<<<<< HEAD
 
     /**
      * 自定义AlertDialog-02
@@ -438,6 +396,4 @@ public class MainActivity extends Activity {
     public void activityBtn(View view) {
         startActivity(new Intent(MainActivity.this, DialogStyleActivity.class));
     }
-=======
->>>>>>> 7020f95802514c3818c52478095a30454a5b6a60
 }
