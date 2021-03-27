@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/fl_container_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/fragment_background" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:padding="20dp">
+
+        <Button
+            android:id="@+id/btn_replace"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/center_view"
+            android:background="@drawable/btn_background"
+            android:text="replace"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+        <View
+            android:id="@+id/center_view"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true" />
+
+        <Button
+            android:id="@+id/btn_remove"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/center_view"
+            android:background="@drawable/btn_background"
+            android:text="Remove"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

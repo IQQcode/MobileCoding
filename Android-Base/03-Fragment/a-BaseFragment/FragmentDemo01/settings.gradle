@@ -1,0 +1,8 @@
+include ':demo06_dialogfragment'
+include ':demo05'
+include ':fragmentlife04'
+include ':movefragemnt03'
+include ':dynamicbind02'
+include ':staticBind01'
+include ':app'
+rootProject.name = "FragmentDemo01"

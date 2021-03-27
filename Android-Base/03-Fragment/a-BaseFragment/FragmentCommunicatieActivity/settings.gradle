@@ -1,0 +1,5 @@
+include ':callback04'
+include ':fragmenttoactivity03'
+include ':ActivityToFragment_dynamic02'
+include ':ActivityToFragment01'
+rootProject.name = "FragmentCommunicatieActivity"

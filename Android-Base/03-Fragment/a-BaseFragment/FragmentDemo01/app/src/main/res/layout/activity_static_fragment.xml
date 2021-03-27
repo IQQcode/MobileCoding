@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/fm_fragment01"
+        android:name="top.iqqcode.fragmentdemo01.FragmentView"
+        android:layout_width="200dp"
+        android:layout_height="200dp" />
+
+    <fragment
+        android:id="@+id/fm_fragment02"
+        android:name="top.iqqcode.fragmentdemo01.FragmentView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>
