@@ -24,6 +24,7 @@ public class BottomFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
+        // 静态加载Fragment布局
         View view = inflater.inflate(R.layout.fragment_bottom, container, false);
         return view;
     }

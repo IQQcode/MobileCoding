@@ -1,0 +1,2 @@
+include ':pager01'
+rootProject.name = "01_ViewPagerBasic"

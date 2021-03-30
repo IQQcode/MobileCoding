@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_top_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/tv_top_bar_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="Info"
+            android:textSize="20dp" />
+
+        <View
+            android:id="@+id/top_bar_line"
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/ly_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/div_tab_bottom_line"
+        android:layout_below="@id/rl_top_title" />
+
+    <View
+        android:id="@+id/div_tab_bottom_line"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_above="@id/ll_bottom_bar"
+        android:background="@color/div_white" />
+
+    <RadioGroup
+        android:id="@+id/ll_bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/tab_index"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/tab_menu_index"
+            android:text="提醒"
+            android:textColor="@drawable/tab_menu_text" />
+
+        <RadioButton
+            android:id="@+id/tab_fun"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/tab_menu_fun"
+            android:text="我的"
+            android:textColor="@drawable/tab_menu_text" />
+
+        <RadioButton
+            android:id="@+id/tab_message"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/tab_menu_message"
+            android:text="信息"
+            android:textColor="@drawable/tab_menu_text" />
+
+        <RadioButton
+            android:id="@+id/tab_setting"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/tab_menu_setting"
+            android:text="设置"
+            android:textColor="@drawable/tab_menu_text" />
+
+    </RadioGroup>
+</RelativeLayout>
