@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">pager03_demo</string>
+    <string name="home">Home</string>
+    <string name="fun">Fun</string>
+    <string name="ding">Ding</string>
+    <string name="setting">Setting</string>
+</resources>

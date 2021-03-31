@@ -1,2 +1,7 @@
+include ':pager04'
+include ':pager03_demo'
+include ':pager02_fragment'
+include ':pager02_Fragment'
+include ':pager02_Fragment'
 include ':pager01'
 rootProject.name = "01_ViewPagerBasic"
