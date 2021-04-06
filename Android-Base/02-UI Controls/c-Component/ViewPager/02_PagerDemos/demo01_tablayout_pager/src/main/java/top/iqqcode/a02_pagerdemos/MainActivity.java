@@ -12,6 +12,11 @@ import com.google.android.material.tabs.TabLayout;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @Author: iqqcode
+ * @Date: 2021/3/31
+ * @Description: ViewPager + TabLayout 结合使用
+ */
 public class MainActivity extends AppCompatActivity {
 
     private ViewPager mViewPager;
