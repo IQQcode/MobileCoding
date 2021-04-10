@@ -1,0 +1,7 @@
+include ':app1_testservice'
+include ':app4_aldiclient'
+include ':app4_aidlserver'
+include ':app3_bindservice'
+include ':app2_music'
+include ':app'
+rootProject.name = "01_ServiceLifeCycle"
