@@ -1,0 +1,3 @@
+include ':app_viewbinding'
+include ':app'
+rootProject.name = "01FindView"

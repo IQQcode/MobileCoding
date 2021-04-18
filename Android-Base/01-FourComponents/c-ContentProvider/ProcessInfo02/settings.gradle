@@ -1,0 +1,4 @@
+include ':app_observer'
+include ':app_client'
+include ':app_server'
+rootProject.name = "ProcessInfo02"

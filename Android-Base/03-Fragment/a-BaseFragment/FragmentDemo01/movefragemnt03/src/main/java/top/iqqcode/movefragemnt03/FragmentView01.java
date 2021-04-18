@@ -23,7 +23,6 @@ public class FragmentView01 extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        // 加载视图View对象并返回
 
         // 创建视图对象，设置数据并返回
         TextView mTextView = new TextView(getActivity());

@@ -17,6 +17,7 @@
             <option value="$PROJECT_DIR$/app3_bindservice" />
             <option value="$PROJECT_DIR$/app4_aidlserver" />
             <option value="$PROJECT_DIR$/app4_aldiclient" />
+            <option value="$PROJECT_DIR$/app5_kotlintest" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />

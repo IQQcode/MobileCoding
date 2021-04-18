@@ -40,6 +40,10 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, "停止Service", Toast.LENGTH_SHORT).show();
     }
 
+    /**
+     * 绑定Service
+     * @param view
+     */
     public void bindServiceTest(View view) {
         Intent intent = new Intent(getApplicationContext(), ServiceLocal.class);
         if (connection == null) {
