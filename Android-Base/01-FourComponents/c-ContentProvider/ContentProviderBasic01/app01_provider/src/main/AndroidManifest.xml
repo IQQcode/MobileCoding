@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="top.iqqcode.app01_provider">
 
+<!--    <permission android:name="top.iqqcode.provider.PROVIDER" android:protectionLevel="normal"/>-->
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -19,6 +21,7 @@
         <provider
             android:name=".MyProvider"
             android:authorities="top.iqqcode.provider.myprovider"
+            android:permission="top.iqqcode.provider.PROVIDER"
             android:enabled="true"
             android:exported="true" />
     </application>

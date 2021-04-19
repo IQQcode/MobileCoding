@@ -18,6 +18,8 @@
             <option value="$PROJECT_DIR$/app02_query" />
             <option value="$PROJECT_DIR$/app03_phone" />
             <option value="$PROJECT_DIR$/app04_phone" />
+            <option value="$PROJECT_DIR$/databasetest" />
+            <option value="$PROJECT_DIR$/providertest" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

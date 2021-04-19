@@ -1,4 +1,4 @@
-package top.iqqcode.app01_resolver;
+package top.iqqcode.providertest;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -18,31 +18,30 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        Button addData = findViewById(R.id.add_data);
+        Button addData = (Button) findViewById(R.id.add_data);
         addData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // 添加数据
-                Uri uri = Uri.parse("content://top.iqqcode.provider.myprovider/book");
+                Uri uri = Uri.parse("content://com.example.databasetest.provider/book");
                 ContentValues values = new ContentValues();
-                values.put("_id", 8);
-                values.put("author", "George Martin");
-                values.put("price", 22.85);
-                values.put("pages", 1040);
                 values.put("name", "A Clash of Kings");
+                values.put("author", "George Martin");
+                values.put("pages", 1040);
+                values.put("price", 22.85);
                 Uri newUri = getContentResolver().insert(uri, values);
                 newId = newUri.getPathSegments().get(1);
             }
         });
 
-        Button queryData = findViewById(R.id.query_data);
+        Button queryData = (Button) findViewById(R.id.query_data);
         queryData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // 查询数据
-                Uri uri = Uri.parse("content://top.iqqcode.provider.myprovider/book");
-                Cursor cursor = getContentResolver().query(uri, null, null, null, null);
+                Uri uri = Uri.parse("content://com.example.databasetest.provider/book");
+                Cursor cursor = getContentResolver().query(uri, null, null, null,
+                        null);
                 if (cursor != null) {
                     while (cursor.moveToNext()) {
                         String name = cursor.getString(cursor.getColumnIndex
@@ -67,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // 更新数据
-                Uri uri = Uri.parse("content://top.iqqcode.provider.myprovider/book/" + newId);
+                Uri uri = Uri.parse("content://com.example.databasetest.provider/book/" + newId);
                 ContentValues values = new ContentValues();
                 values.put("name", "A Storm of Swords");
                 values.put("pages", 1216);
@@ -81,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // 删除数据
-                Uri uri = Uri.parse("content://top.iqqcode.provider.myprovider/book/" + newId);
+                Uri uri = Uri.parse("content://com.example.databasetest.provider/book/" + newId);
                 getContentResolver().delete(uri, null, null);
             }
         });

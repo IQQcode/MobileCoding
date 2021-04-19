@@ -1,4 +1,4 @@
-package top.iqqcode.app01_provider;
+package com.example.databasetest;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -9,13 +9,13 @@ import androidx.annotation.Nullable;
 
 /**
  * @Author: iqqcode
- * @Date: 2021-04-15 08:26
+ * @Date: 2021-04-18 16:26
  * @Description:
  */
-public class DBHelper extends SQLiteOpenHelper {
+public class MyDatabaseHelper extends SQLiteOpenHelper {
 
     // 数据库名
-    private static final String DATABASE_NAME = "BookStore.db";
+    private static final String DATABASE_NAME = "bookstore.db";
 
     // 表名
     public static final String BOOK_TABLE_NAME = "book";
@@ -40,7 +40,7 @@ public class DBHelper extends SQLiteOpenHelper {
     //数据库版本号
     private static final int DATABASE_VERSION = 1;
 
-    public DBHelper(@Nullable Context context) {
+    public MyDatabaseHelper(@Nullable Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
