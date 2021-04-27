@@ -1,0 +1,124 @@
+package top.iqqcode.app2.adapter;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.List;
+
+import top.iqqcode.app2.R;
+import top.iqqcode.app2.beans.ItemBean;
+
+
+/**
+ * @Author: iqqcode
+ * @Date: 2021-04-20 21:23
+ * @Description:ListView效果的适配器
+ */
+public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ViewHolder> {
+
+    private List<ItemBean> data;
+    private LayoutInflater inflater;
+    // 3. 提供设置接口的方法（其实是外部实现）
+    private OnItemClickListener mOnItemClickListener;
+
+    // 通过构造方法设置数据
+    public ListViewAdapter(Context context, List<ItemBean> data) {
+        this.data = data;
+        inflater = LayoutInflater.from(context);
+    }
+
+    /**
+     * 创建item的View
+     * @param parent
+     * @param viewType
+     * @return
+     */
+    @NonNull
+    @Override
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = inflater.inflate(R.layout.item_staggered_view, null, false);
+        return new ViewHolder(view);
+    }
+
+    /**
+     * 绑定holder, 用来设置数据
+     * @param holder
+     * @param position
+     */
+    @Override
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        holder.setData(data.get(position), position);
+    }
+
+    /**
+     * 返回item个数
+     * @return
+     */
+    @Override
+    public int getItemCount() {
+        return data == null ? 0 : data.size();
+    }
+
+    // 2.设置item的监听事件(定义接口内部的方法)
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        // 设置监听，即设置回调接口
+        this.mOnItemClickListener = listener;
+    }
+
+    /**
+     * 【编写回调的步骤】
+     *   1. 创建这个接口
+     *   2. 定义接口内部的方法
+     *   3. 提供设置接口的方法（其实是外部实现）
+     *   4. 接口方法的调用
+     */
+
+    // 1.创建接口
+    public interface OnItemClickListener {
+        void onItemClick(int position);
+    }
+
+    public class ViewHolder extends RecyclerView.ViewHolder {
+
+        private ImageView icon;
+        private TextView title;
+        private int mPosition;
+
+        public ViewHolder(@NonNull View itemView) {
+            super(itemView);
+            // 寻找控件
+            icon = itemView.findViewById(R.id.staggered_item_icon);
+            title = itemView.findViewById(R.id.staggered_item_text);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (mOnItemClickListener != null) {
+                        mOnItemClickListener.onItemClick(mPosition);
+                    }
+                }
+            });
+        }
+
+        public List<ItemBean> getData() {
+            return data;
+        }
+
+        /**
+         * 设置数据
+         * @param itemBean
+         */
+        public void setData(ItemBean itemBean, int position) {
+            this.mPosition = position;
+            icon.setImageResource(itemBean.imageId);
+            title.setText(itemBean.title);
+        }
+    }
+}
