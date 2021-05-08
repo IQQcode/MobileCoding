@@ -1,0 +1,3 @@
+rootProject.name = "07_newbasic"
+include ':app'
+include ':02seekbar'

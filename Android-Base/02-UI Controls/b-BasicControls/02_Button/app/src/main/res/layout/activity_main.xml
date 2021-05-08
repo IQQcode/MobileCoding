@@ -129,10 +129,10 @@
         android:id="@+id/ed_myedit09"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
         android:layout_below="@id/my_progress08"
+        android:layout_marginTop="40dp"
         android:background="@drawable/edit_for_line_bg"
-        android:hint="底部线条EditText"/>
+        android:hint="底部线条EditText" />
 
 
 </RelativeLayout>
