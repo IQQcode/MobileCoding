@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.tanjiajun.jsonrecyclerview.view.JSONRecyclerView
 import okhttp3.*
 import okhttp3.FormBody
 import okio.IOException
@@ -37,7 +38,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     /**
-     * 同步请求
+     * GET同步请求
      * 使用同步请求的是需要调用execute()方法，Response接收返回的对象。
      * 同步和异步请求只是最后一步的请求的方法不同而已。
      */
@@ -49,6 +50,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         // 第一步获取okHttpClient对象
         val client: OkHttpClient = OkHttpClient.Builder()
             .connectTimeout(8000, TimeUnit.MILLISECONDS)
+            .addInterceptor(LogIntercept()) // 添加拦截器
             .build()
         // 第二步构建Request对象
         val request: Request = Request.Builder()
@@ -74,10 +76,14 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         }.start()
     }
 
+    /**
+     * POST同步请求
+     */
     private fun syncRequestByPost() {
 
         val client: OkHttpClient = OkHttpClient.Builder()
             .connectTimeout(8000, TimeUnit.MILLISECONDS)
+            .addInterceptor(LogIntercept()) // 添加拦截器
             .build()
 
         val formBody: RequestBody = FormBody.Builder()
@@ -114,6 +120,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private fun asyncRequestByGet() {
         val client: OkHttpClient = OkHttpClient.Builder()
             .connectTimeout(8000, TimeUnit.MILLISECONDS)
+            .addInterceptor(LogIntercept()) // 添加拦截器
             .build()
 
         val request: Request = Request.Builder()
@@ -139,7 +146,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     /**
-     * Post请求
+     * Post异步请求
      * @throws java
      */
     private fun asyncRequestByPost() {
@@ -147,6 +154,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         val client: OkHttpClient = OkHttpClient.Builder()
             .connectTimeout(8000, TimeUnit.MILLISECONDS)
+            .addInterceptor(LogIntercept()) // 添加拦截器
             .build()
 
         // 表单数据
@@ -180,26 +188,43 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     }
 
+    private fun jsonFormat(jsonString: String) {
+        findViewById<JSONRecyclerView>(R.id.rv_json).bindData(jsonString)
+    }
+
+
     override fun onClick(v: View?) {
         when (v?.id) {
             R.id.mButton01 -> {
+                binding.rvJson.visibility = View.GONE
+                binding.mTextViewContext.visibility = View.VISIBLE
                 binding.mTextViewContext.text = ""
                 syncRequestByGet()
             }
             R.id.mButton02 -> {
+                binding.rvJson.visibility = View.GONE
+                binding.mTextViewContext.visibility = View.VISIBLE
                 binding.mTextViewContext.text = ""
                 asyncRequestByGet()
             }
             R.id.mButton03 -> {
+                binding.rvJson.visibility = View.GONE
+                binding.mTextViewContext.visibility = View.VISIBLE
                 binding.mTextViewContext.text = ""
                 syncRequestByPost()
             }
             R.id.mButton04 -> {
+                binding.rvJson.visibility = View.GONE
+                binding.mTextViewContext.visibility = View.VISIBLE
                 binding.mTextViewContext.text = ""
                 asyncRequestByPost()
             }
-            R.id.mButton05 -> Toast.makeText(this@MainActivity, "JSON Format", Toast.LENGTH_SHORT)
-                .show()
+            R.id.mButton05 -> {
+                Toast.makeText(this@MainActivity, "JSON Format", Toast.LENGTH_SHORT).show()
+                binding.mTextViewContext.visibility = View.GONE
+                binding.rvJson.visibility = View.VISIBLE
+                jsonFormat(binding.mTextViewContext.text as String)
+            }
         }
     }
 }
