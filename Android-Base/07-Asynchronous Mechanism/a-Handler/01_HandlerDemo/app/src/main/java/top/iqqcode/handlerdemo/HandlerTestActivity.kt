@@ -55,7 +55,7 @@ class HandlerTestActivity : AppCompatActivity() {
     }
 
     /**
-     * 请求服务器端,得到返回的结果字符串
+     * 请求服务器端,得到返回的结果字符串(在子线程中请求)
      * @return
      * @throws Exception
      */
