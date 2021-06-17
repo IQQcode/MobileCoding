@@ -1,6 +1,7 @@
 package top.iqqcode.asynctasks
 
 import android.Manifest
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.AsyncTask
 import android.os.Build
@@ -45,6 +46,10 @@ class MainActivity : AppCompatActivity() {
         binding.mButton.setOnClickListener {
             // 启用AsyncTask，传入需要执行的内容
             MyAsyncTask(this).execute(urlString)
+        }
+
+        binding.mButtonDemo.setOnClickListener {
+            startActivity(Intent(this@MainActivity, DownLoadActivity::class.java))
         }
     }
 

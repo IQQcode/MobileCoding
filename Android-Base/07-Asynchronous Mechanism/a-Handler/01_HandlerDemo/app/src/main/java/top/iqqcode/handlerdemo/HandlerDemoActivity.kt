@@ -9,6 +9,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import top.iqqcode.handlerdemo.databinding.ActivityHandlerDemoBinding
+import java.lang.ref.WeakReference
 import java.util.*
 
 
@@ -31,6 +32,13 @@ class HandlerDemoActivity : AppCompatActivity(), View.OnClickListener {
         val rootView: View = binding.root
         setContentView(rootView)
 
+        // 弱引用Handler
+        val weakHandler = CountDownTimeHandler(this)
+
+        val message = Message.obtain()
+        message.what = WHAT_INCREASE
+        handler.sendMessageDelayed(message, 1000)
+
         // 使用定时器
         val timer = Timer();
         timer.schedule(object: TimerTask() {
@@ -49,7 +57,7 @@ class HandlerDemoActivity : AppCompatActivity(), View.OnClickListener {
             super.handleMessage(msg)
             // 得到当前现实的数值
             var number = Integer.parseInt(binding.mNumber.text.toString())
-            when (msg.what) {
+            when (msg!!.what) {
                 // 限制number <= 20
                 WHAT_INCREASE -> {
                     if (number == 20) {
@@ -84,6 +92,22 @@ class HandlerDemoActivity : AppCompatActivity(), View.OnClickListener {
                 }
             }
         }
+    }
+
+    /**
+     * 静态Handler--弱引用防止内存泄漏
+     * @property mWeakReference WeakReference<HandlerDemoActivity>
+     * @constructor
+     */
+    private inner class CountDownTimeHandler(activity: HandlerDemoActivity) : Handler(Looper.myLooper()!!) {
+
+        val mWeakReference: WeakReference<HandlerDemoActivity> = WeakReference<HandlerDemoActivity>(activity)
+
+        override fun handleMessage(msg: Message) {
+            super.handleMessage(msg)
+            // TODO --> 更换
+        }
+
     }
 
     /**
