@@ -24,16 +24,15 @@ class UIErrorActivity : AppCompatActivity() {
 
         thread(start = true) {
             var count = 0
-            while(count < 50) {
+            while (count < 50) {
                 count++
                 binding.textView.text = "Count = $count"
                 try {
                     Thread.sleep(1000)
-                }catch (e: InterruptedException) {
+                } catch (e: InterruptedException) {
                     e.printStackTrace()
                 }
             }
         }
-
     }
 }

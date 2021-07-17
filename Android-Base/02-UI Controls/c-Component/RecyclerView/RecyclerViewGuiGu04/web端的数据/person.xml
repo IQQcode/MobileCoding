@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<persons>
+	<person id="1">
+		<name>张三</name>
+		<image src = "http://192.168.1.5:8080/FileUpload/images/01.jpg"></image>
+	</person>
+	
+	<person id="2">
+		<name>李四</name>
+		<image src = "http://192.168.1.5:8080/FileUpload/images/02.jpg"></image>
+	</person>
+	
+	<person id="3">
+		<name>王五</name>
+		<image src = "http://192.168.1.5:8080/FileUpload/images/03.jpg"></image>
+	</person>
+	
+	<person id="4">
+		<name>刘六</name>
+		<image src = "http://192.168.1.5:8080/FileUpload/images/04.jpg"></image>
+	</person>
+	
+	<person id="5">
+		<name>魏七</name>
+		<image src = "http://192.168.1.5:8080/FileUpload/images/05.jpg"></image>
+	</person>
+	
+	<person id="6">
+		<name>天上飞的</name>
+		<image src = "http://192.168.1.5:8080/FileUpload/images/06.jpg"></image>
+	</person>
+	
+	<person id="7">
+		<name>水里游的</name>
+		<image src = "http://192.168.1.5:8080/FileUpload/images/07.jpg"></image>
+	</person>
+	<person id="8">
+		<name>地上跑的</name>
+		<image src = "http://192.168.1.5:8080/FileUpload/images/08.jpg"></image>
+	</person>
+	
+	<person id="9">
+		<name>风风</name>
+		<image src = "http://192.168.1.5:8080/FileUpload/images/09.jpg"></image>
+	</person>
+	
+	<person id="10">
+		<name>雨雨</name>
+		<image src = "http://192.168.1.5:8080/FileUpload/images/10.jpg"></image>
+	</person>
+	
+	<person id="11">
+		<name>雷雷</name>
+		<image src = "http://192.168.1.5:8080/FileUpload/images/11.jpg"></image>
+	</person>
+	
+	<person id="12">
+		<name>点点</name>
+		<image src = "http://192.168.1.5:8080/FileUpload/images/12.jpg"></image>
+	</person>
+</persons>

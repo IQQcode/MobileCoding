@@ -1,0 +1,9 @@
+include ':providertest'
+include ':databasetest'
+include ':app04_phone'
+include ':app03_phone'
+include ':app01_resolver'
+include ':app01_provider'
+include ':app02_crud'
+include ':app02_query'
+rootProject.name = "ContentProviderBasic01"
