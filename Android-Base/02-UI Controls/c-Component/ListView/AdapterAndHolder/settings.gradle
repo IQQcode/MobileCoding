@@ -1,0 +1,4 @@
+include ':03baseadapter'
+include ':02simpleadapter'
+include ':01arrayadapter'
+rootProject.name = "AdapterAndHolder"

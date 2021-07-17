@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/mTextViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="RecyclerView"
+        android:textAllCaps="false"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/toolButton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/mTextViewTitle"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
+
+        <Button
+            android:id="@+id/mButton1"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="Add"
+            android:textAllCaps="false" />
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="50dp" />
+
+        <Button
+            android:id="@+id/mButton2"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="Del"
+            android:textAllCaps="false" />
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="50dp" />
+
+        <Button
+            android:id="@+id/mButton3"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="List"
+            android:textAllCaps="false" />
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="50dp" />
+
+
+        <Button
+            android:id="@+id/mButton4"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="Grid"
+            android:textAllCaps="false" />
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="50dp" />
+
+        <Button
+            android:id="@+id/mButton5"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="Flow"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolButton"
+        android:layout_margin="5dp" />
+
+</RelativeLayout>
