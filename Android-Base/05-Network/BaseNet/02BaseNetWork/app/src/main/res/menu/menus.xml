@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/one"
+        android:orderInCategory="100"
+        app:showAsAction="always"
+        android:title="加载图片" />
+
+    <item android:id="@+id/two"
+       android:orderInCategory="100"
+        app:showAsAction="always"
+        android:title="请求网络" />
+
+    <item android:id="@+id/three"
+        android:orderInCategory="100"
+        app:showAsAction="always"
+        android:title="WebView加载网页" />
+</menu>
