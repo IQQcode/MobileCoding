@@ -7,11 +7,11 @@
         <option name="testRunner" value="GRADLE" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleHome" value="D:/gradle-7.1.1/gradle-7.1.1" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../../../../../../../develop/gradle-6.1.1" />
+        <option name="gradleJvm" value="1.8 (2)" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/02asyncnet" />
             <option value="$PROJECT_DIR$/app" />
           </set>
         </option>
