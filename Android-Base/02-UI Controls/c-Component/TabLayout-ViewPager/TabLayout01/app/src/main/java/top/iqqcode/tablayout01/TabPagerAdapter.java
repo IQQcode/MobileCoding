@@ -15,11 +15,11 @@ import java.util.List;
  * @Date: 2021-08-18 00:07
  * @Description:
  */
-public class DemoAdapter extends FragmentPagerAdapter {
+public class TabPagerAdapter extends FragmentPagerAdapter {
 
-    private List<DemoFragment> container;
+    private List<TabFragment> container;
 
-    public DemoAdapter(@NonNull FragmentManager fm, List<DemoFragment> mContainer) {
+    public TabPagerAdapter(@NonNull FragmentManager fm, List<TabFragment> mContainer) {
         super(fm);
         this.container = mContainer;
     }

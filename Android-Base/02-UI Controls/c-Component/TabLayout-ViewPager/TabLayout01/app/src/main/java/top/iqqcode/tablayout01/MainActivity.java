@@ -4,8 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
-import android.widget.TableLayout;
-import android.widget.TextView;
 
 import com.google.android.material.tabs.TabLayout;
 
@@ -15,8 +13,8 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     private ViewPager mViewPager;
-    private List<DemoFragment> mContainer;
-    private DemoAdapter mAdapter;
+    private List<TabFragment> mContainer;
+    private TabPagerAdapter mAdapter;
     private TabLayout mTabLayout;
 
     @Override
@@ -27,11 +25,11 @@ public class MainActivity extends AppCompatActivity {
         initView();
         mContainer = new ArrayList<>();
         for (int i = 1; i <= 10; i++) {
-            mContainer.add(new DemoFragment("标题" + i, "内容 " + i));
+            mContainer.add(new TabFragment("标题" + i, "内容 " + i));
         }
-        mAdapter = new DemoAdapter(getSupportFragmentManager(), mContainer);
+        mAdapter = new TabPagerAdapter(getSupportFragmentManager(), mContainer);
         mViewPager.setAdapter(mAdapter);
-        mTabLayout.setupWithViewPager(mViewPager);
+        mTabLayout.setupWithViewPager(mViewPager); //与ViewPage建立关系
         // mTabLayout.setTabMode(TabLayout.MODE_FIXED); // 全部显示
         mTabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
     }

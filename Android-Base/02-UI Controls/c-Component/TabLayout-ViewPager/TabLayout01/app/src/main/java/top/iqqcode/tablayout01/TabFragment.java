@@ -18,13 +18,13 @@ import androidx.fragment.app.Fragment;
  * @Date: 2021-08-17 23:53
  * @Description:
  */
-public class DemoFragment extends Fragment {
+public class TabFragment extends Fragment {
 
     private Context mContext;
     private TextView mTextView;
     private final String title, content;
 
-    public DemoFragment(String title, String content) {
+    public TabFragment(String title, String content) {
         super();
         this.title = title;
         this.content = content;
@@ -59,6 +59,4 @@ public class DemoFragment extends Fragment {
     public String getContent() {
         return content;
     }
-
-
 }
