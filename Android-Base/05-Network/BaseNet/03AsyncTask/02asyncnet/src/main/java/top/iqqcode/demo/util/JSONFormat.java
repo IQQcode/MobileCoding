@@ -1,4 +1,4 @@
-package top.iqqcode.demo;
+package top.iqqcode.demo.util;
 
 /**
  * @Author: iqqcode
