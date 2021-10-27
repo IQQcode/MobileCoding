@@ -259,7 +259,6 @@ public class TaskImageView extends androidx.appcompat.widget.AppCompatImageView 
     }
 
     private class LoadAsyncTask extends AsyncTask<Void, Void, Bitmap> {
-
         @Override
         protected Bitmap doInBackground(Void... voids) {
             try {

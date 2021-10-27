@@ -13,7 +13,6 @@ import java.net.URLEncoder;
 
 import top.iqqcode.demo.listen.MyAsyncTask;
 import top.iqqcode.demo.listen.OnDataListener;
-import top.iqqcode.demo.load.LoadImageActivity;
 import top.iqqcode.demo.util.JSONFormat;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {

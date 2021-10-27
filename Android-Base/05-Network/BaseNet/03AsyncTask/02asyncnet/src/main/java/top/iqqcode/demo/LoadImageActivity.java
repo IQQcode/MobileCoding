@@ -1,4 +1,4 @@
-package top.iqqcode.demo.load;
+package top.iqqcode.demo;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".load.LoadImageActivity">
+    tools:context=".LoadImageActivity">
 
     <Button
         android:id="@+id/button"
