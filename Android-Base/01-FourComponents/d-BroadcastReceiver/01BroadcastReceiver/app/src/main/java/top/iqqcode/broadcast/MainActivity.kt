@@ -16,6 +16,5 @@ class MainActivity : AppCompatActivity() {
         val rootView: View = binding.root
         setContentView(rootView)
 
-
     }
 }
