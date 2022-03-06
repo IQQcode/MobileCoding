@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView.OnChildAttachStateChangeListene
 /**
  * @Author: iqqcode
  * @Date: 2022-03-05 22:18
- * @Description:
+ * @Description: 自定义的条目点击事件支持类ItemClickSupport
  */
 class ItemClickSupport public constructor(private val mRecyclerView: RecyclerView) {
 
@@ -72,6 +72,8 @@ class ItemClickSupport public constructor(private val mRecyclerView: RecyclerVie
 
         /**
          * 为RecyclerView设置ItemClickSupport
+         * @param view [ERROR : RecyclerView]
+         * @return ItemClickSupport
          */
         fun addTo(view: RecyclerView): ItemClickSupport {
             var support = view.getTag(R.id.item_click_support) as? ItemClickSupport
@@ -83,6 +85,8 @@ class ItemClickSupport public constructor(private val mRecyclerView: RecyclerVie
 
         /**
          * 为RecyclerView移除ItemClickSupport
+         * @param view [ERROR : RecyclerView]
+         * @return ItemClickSupport?
          */
         fun removeFrom(view: RecyclerView): ItemClickSupport? {
             val support = view.getTag(R.id.item_click_support) as? ItemClickSupport

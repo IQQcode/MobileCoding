@@ -5,13 +5,16 @@ import androidx.recyclerview.widget.RecyclerView.SimpleOnItemTouchListener
 import androidx.core.view.GestureDetectorCompat
 import android.view.MotionEvent
 import android.view.GestureDetector.SimpleOnGestureListener
+import android.view.View
 
 /**
  * @Author: iqqcode
  * @Date: 2022-03-05 21:41
  * @Description:
  */
-abstract class ItemClickListener(private val mRecyclerView: RecyclerView) : SimpleOnItemTouchListener() {
+abstract class ItemClickListener(
+    private val mRecyclerView: RecyclerView?
+) : SimpleOnItemTouchListener() {
 
     private val mGestureDetectorCompat: GestureDetectorCompat
 
@@ -42,22 +45,50 @@ abstract class ItemClickListener(private val mRecyclerView: RecyclerView) : Simp
      */
     abstract fun onItemClick(vh: RecyclerView.ViewHolder?)
 
+    abstract fun onItemLongClick(vh: RecyclerView.ViewHolder?)
+
+    abstract fun onItemDoubleClick(vh: View?)
+
     private inner class MyGestureListener : SimpleOnGestureListener() {
-        // 这个方法在简单的点击屏幕时执行
-        // 如果要处理长按事件可以复写onLongPress（）方法，方法内具体逻辑类似
-        override fun onSingleTapUp(e: MotionEvent): Boolean {
-            val childView = mRecyclerView.findChildViewUnder(e.x, e.y)
+
+        override fun onSingleTapUp(e: MotionEvent?): Boolean {
+            val childView = e?.let { mRecyclerView?.findChildViewUnder(it.x, e.y) }
             if (childView != null) {
-                val viewHolder = mRecyclerView.getChildViewHolder(childView)
+                val viewHolder = mRecyclerView?.getChildViewHolder(childView)
                 onItemClick(viewHolder) //触发回调
             }
-            return true
+            return false
+        }
+
+        /**
+         * 长按事件
+         * @param e MotionEvent
+         */
+        override fun onLongPress(e: MotionEvent?) {
+            super.onLongPress(e)
+            val childView = e?.let { mRecyclerView?.findChildViewUnder(it.x, e.y) }
+            if (childView != null) {
+                val viewHolder = mRecyclerView?.getChildViewHolder(childView)
+                onItemLongClick(viewHolder) //触发回调
+            }
+        }
+
+        override fun onDoubleTapEvent(e: MotionEvent?): Boolean {
+            val action = e?.action;
+            if (action == MotionEvent.ACTION_UP) {
+                val childView = e.let { mRecyclerView?.findChildViewUnder(it.x, e.y) }
+                if (childView != null) {
+                    onItemDoubleClick(childView);
+                    return true;
+                }
+            }
+            return false
         }
     }
 
     // 通过构造传入我们的RecyclerView,并初始化GestureDetectorCompat
     init {
         mGestureDetectorCompat = GestureDetectorCompat(
-            mRecyclerView.context, MyGestureListener())
+            mRecyclerView?.context, MyGestureListener())
     }
 }
