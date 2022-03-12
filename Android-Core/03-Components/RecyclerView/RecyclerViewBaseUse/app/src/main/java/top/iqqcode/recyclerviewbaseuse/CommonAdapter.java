@@ -53,7 +53,7 @@ public class CommonAdapter extends RecyclerView.Adapter<CommonViewHolder> {
     public CommonViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = inflater.inflate(R.layout.list_item_view, null);
         CommonViewHolder holder = new CommonViewHolder(view);
-        return holder;
+        return holder;  // 传入的View就是条目界面
     }
 
     /**
@@ -75,6 +75,10 @@ public class CommonAdapter extends RecyclerView.Adapter<CommonViewHolder> {
         });
     }
 
+    /**
+     * item条目个数
+     * @return
+     */
     @Override
     public int getItemCount() {
         return mList == null ? 0 : mList.size();
