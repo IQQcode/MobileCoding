@@ -35,8 +35,6 @@ public class MainActivity extends AppCompatActivity {
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(layoutManager);
-        // 添加分割线(背景色为RecyclerView的背景色，可自定义)
-        //mRecyclerView.addItemDecoration(new ItemDecoration());
         mAdapter = new CommonAdapter(this);
         mAdapter.setData(dataList);
         mRecyclerView.setAdapter(mAdapter);
@@ -76,14 +74,6 @@ public class MainActivity extends AppCompatActivity {
             dataList.add(cherry);
             ItemData mango = new ItemData("Mango", R.mipmap.ic_launcher);
             dataList.add(mango);
-        }
-    }
-
-    class ItemDecoration extends RecyclerView.ItemDecoration {
-        @Override
-        public void getItemOffsets(@NonNull Rect outRect, @NonNull View view, @NonNull RecyclerView parent, @NonNull RecyclerView.State state) {
-            super.getItemOffsets(outRect, view, parent, state);
-            outRect.set(0, 0, 0, getResources().getDimensionPixelOffset(R.dimen.itemDivider));
         }
     }
 }
