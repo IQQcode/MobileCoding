@@ -14,3 +14,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "RCLoadAndRefresh"
 include ':app'
+include ':02refresh'

@@ -7,6 +7,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/MobileCoding/Android-Core/03-Components/RecyclerView/RCLoadAndRefresh/02refresh/src/main/res/layout/activity_main.xml" value="0.259375" />
+        <entry key="..\:/MobileCoding/Android-Core/03-Components/RecyclerView/RCLoadAndRefresh/02refresh/src/main/res/layout/activity_new.xml" value="0.27395833333333336" />
+        <entry key="..\:/MobileCoding/Android-Core/03-Components/RecyclerView/RCLoadAndRefresh/02refresh/src/main/res/layout/item_viwe.xml" value="0.27395833333333336" />
         <entry key="..\:/MobileCoding/Android-Core/03-Components/RecyclerView/RCLoadAndRefresh/app/src/main/res/drawable/progressbar_refresh.xml" value="0.1385" />
         <entry key="..\:/MobileCoding/Android-Core/03-Components/RecyclerView/RCLoadAndRefresh/app/src/main/res/layout/activity_load_more_wrapper.xml" value="0.27395833333333336" />
         <entry key="..\:/MobileCoding/Android-Core/03-Components/RecyclerView/RCLoadAndRefresh/app/src/main/res/layout/activity_loadmore.xml" value="0.27395833333333336" />
