@@ -13,10 +13,11 @@
         <entry key="..\:/MobileCoding/Android-Core/03-Components/RecyclerView/RCLoadAndRefresh/02refresh/src/main/res/layout/item_viwe.xml" value="0.27395833333333336" />
         <entry key="..\:/MobileCoding/Android-Core/03-Components/RecyclerView/RCLoadAndRefresh/03refreshheader/src/main/res/drawable/bg_refresh_view.xml" value="0.142" />
         <entry key="..\:/MobileCoding/Android-Core/03-Components/RecyclerView/RCLoadAndRefresh/03refreshheader/src/main/res/drawable/procressgress.xml" value="0.1385" />
-        <entry key="..\:/MobileCoding/Android-Core/03-Components/RecyclerView/RCLoadAndRefresh/03refreshheader/src/main/res/layout/activity_main.xml" value="0.259375" />
+        <entry key="..\:/MobileCoding/Android-Core/03-Components/RecyclerView/RCLoadAndRefresh/03refreshheader/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/MobileCoding/Android-Core/03-Components/RecyclerView/RCLoadAndRefresh/03refreshheader/src/main/res/layout/activity_new.xml" value="0.2598958333333333" />
         <entry key="..\:/MobileCoding/Android-Core/03-Components/RecyclerView/RCLoadAndRefresh/03refreshheader/src/main/res/layout/item_view.xml" value="0.4" />
         <entry key="..\:/MobileCoding/Android-Core/03-Components/RecyclerView/RCLoadAndRefresh/03refreshheader/src/main/res/layout/refresh_header_item.xml" value="0.27395833333333336" />
+        <entry key="..\:/MobileCoding/Android-Core/03-Components/RecyclerView/RCLoadAndRefresh/03refreshheader/src/main/res/layout/view_loading.xml" value="0.27395833333333336" />
         <entry key="..\:/MobileCoding/Android-Core/03-Components/RecyclerView/RCLoadAndRefresh/app/src/main/res/drawable/progressbar_refresh.xml" value="0.1385" />
         <entry key="..\:/MobileCoding/Android-Core/03-Components/RecyclerView/RCLoadAndRefresh/app/src/main/res/layout/activity_load_more_wrapper.xml" value="0.27395833333333336" />
         <entry key="..\:/MobileCoding/Android-Core/03-Components/RecyclerView/RCLoadAndRefresh/app/src/main/res/layout/activity_loadmore.xml" value="0.27395833333333336" />

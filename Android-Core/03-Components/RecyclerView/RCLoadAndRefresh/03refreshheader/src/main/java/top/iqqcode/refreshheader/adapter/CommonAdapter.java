@@ -13,22 +13,16 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 import top.iqqcode.refreshheader.R;
-import top.iqqcode.refreshheader.interfaces.IRefreshHeader;
-import top.iqqcode.refreshheader.view.RefreshHeaderRecyclerView;
 
 /**
  * @Author: iqqcode
  * @Date: 2022-03-12 23:09
  * @Description:
  */
-public class CommonAdapter extends RefreshHeaderRecyclerView.Adapter<CommonAdapter.ViewHolder> {
-
-    private static final int TYPE_REFRESH_HEADER = 100000;
-    private static final int TYPE_NORMAL = 10001;
+public class CommonAdapter extends RecyclerView.Adapter<CommonAdapter.ViewHolder> {
 
     private final Context mContext;
     private List<String> mList;
-    private IRefreshHeader mRefreshHeader;
     private OnItemClickListener onClickListener;
 
     public CommonAdapter(Context mContext) {
@@ -52,13 +46,7 @@ public class CommonAdapter extends RefreshHeaderRecyclerView.Adapter<CommonAdapt
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = null;
-        if (viewType == TYPE_REFRESH_HEADER) {
-            // view = LayoutInflater.from(mContext).inflate(R.layout.refresh_header_item, parent, false);
-            view = mRefreshHeader.getHeaderView();
-        } else {
-            view = LayoutInflater.from(mContext).inflate(R.layout.item_view, parent, false);
-        }
+        View view = LayoutInflater.from(mContext).inflate(R.layout.item_view, parent, false);
         return new ViewHolder(view);
     }
 
@@ -90,27 +78,8 @@ public class CommonAdapter extends RefreshHeaderRecyclerView.Adapter<CommonAdapt
         return mList == null ? 0 : mList.size();
     }
 
-    /**
-     * 根据不同的position可以返回不同的类型
-     * @param position
-     * @return
-     */
-    @Override
-    public int getItemViewType(int position) {
-        // 当position位置为0时，返回为头部的类型
-        if (position == 0) {
-            return TYPE_REFRESH_HEADER;
-        }
-        return TYPE_NORMAL;
-    }
 
-    public void setRefreshHeader(IRefreshHeader header) {
-        if (header != null) {
-            mRefreshHeader = header;
-        }
-    }
-
-    class ViewHolder extends RefreshHeaderRecyclerView.ViewHolder {
+    class ViewHolder extends RecyclerView.ViewHolder {
 
         TextView textView;
 

@@ -7,9 +7,21 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <top.iqqcode.refreshheader.view.RefreshHeaderRecyclerView
-        android:id="@+id/recycler_view"
+    <uk.co.imallan.jellyrefresh.JellyRefreshLayout
+        android:id="@+id/refresh_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:elevation="4dp"
+        android:text="Loading..."
+        app:headerHeight="80dp"
+        app:jellyColor="@color/gradientBg"
+        app:triggerHeight="120dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </uk.co.imallan.jellyrefresh.JellyRefreshLayout>
 
 </LinearLayout>
