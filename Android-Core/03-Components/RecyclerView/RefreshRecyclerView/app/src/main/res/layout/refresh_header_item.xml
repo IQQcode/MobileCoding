@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="bottom"
+    android:background="@drawable/bg_refresh_view"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/header_content"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/tvRefreshStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/pullRefresh"
+            android:textColor="#B5B5B5" />
+
+        <ImageView
+            android:id="@+id/ivHeaderArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="35dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@id/tvRefreshStatus"
+            android:src="@drawable/ic_pulltorefresh_arrow" />
+
+        <ProgressBar
+            android:id="@+id/refreshProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="35dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@id/tvRefreshStatus"
+            android:indeterminateDrawable="@drawable/procressgress"
+            android:src="@drawable/ic_pulltorefresh_arrow"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</LinearLayout>

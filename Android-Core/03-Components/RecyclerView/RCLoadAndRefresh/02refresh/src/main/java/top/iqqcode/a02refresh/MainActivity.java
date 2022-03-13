@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
     private List<ItemData> dataList = new ArrayList<>();
 
     private boolean isRefresh = false; // 是否刷新中
-    private Handler mHandler;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

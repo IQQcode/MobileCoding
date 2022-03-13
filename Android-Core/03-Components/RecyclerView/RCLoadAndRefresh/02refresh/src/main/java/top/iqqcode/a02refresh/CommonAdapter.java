@@ -59,15 +59,17 @@ public class CommonAdapter extends RecyclerView.Adapter<CommonViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull CommonViewHolder holder, int position) {
         ItemData itemData = mList.get(position);
-        holder.imageView.setImageResource(itemData.getImageId());
-        holder.textView.setText(itemData.getName());
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(mContext, "item click", Toast.LENGTH_SHORT).show();
-                onClickListener.onItemClick(holder.getAdapterPosition());
-            }
-        });
+        if (itemData != null) {
+            holder.imageView.setImageResource(itemData.getImageId());
+            holder.textView.setText(itemData.getName());
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Toast.makeText(mContext, "item click", Toast.LENGTH_SHORT).show();
+                    onClickListener.onItemClick(holder.getAdapterPosition());
+                }
+            });
+        }
     }
 
     /**
