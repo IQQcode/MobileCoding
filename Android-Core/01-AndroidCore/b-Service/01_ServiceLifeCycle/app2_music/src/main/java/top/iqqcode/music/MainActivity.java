@@ -1,9 +1,8 @@
 package top.iqqcode.music;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.animation.ObjectAnimator;
+import android.app.Activity;
 import android.content.ComponentName;
 import android.content.Intent;
 import android.content.ServiceConnection;
@@ -23,7 +22,7 @@ import java.text.SimpleDateFormat;
 
 import top.iqqcode.music.service.PlayMusicService;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends Activity implements View.OnClickListener {
 
     private static final String TAG = "TAG";
     private Button btn_start, btn_pause, btn_continue, btn_exit;
