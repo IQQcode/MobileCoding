@@ -7,6 +7,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/MobileCoding/Android-Core/03-Components/RecyclerView/RefreshAndLoad/RefreshLoadDemo/01baseuse/src/main/res/layout/activity_main.xml" value="0.27395833333333336" />
+        <entry key="..\:/MobileCoding/Android-Core/03-Components/RecyclerView/RefreshAndLoad/RefreshLoadDemo/01baseuse/src/main/res/layout/activity_newpage.xml" value="0.27395833333333336" />
+        <entry key="..\:/MobileCoding/Android-Core/03-Components/RecyclerView/RefreshAndLoad/RefreshLoadDemo/01baseuse/src/main/res/layout/item_view.xml" value="0.27395833333333336" />
+        <entry key="..\:/MobileCoding/Android-Core/03-Components/RecyclerView/RefreshAndLoad/RefreshLoadDemo/01baseuse/src/main/res/layout/view_loading.xml" value="0.27395833333333336" />
         <entry key="..\:/MobileCoding/Android-Core/03-Components/RecyclerView/RefreshLoadDemo/01baseuse/src/main/res/layout/activity_newpage.xml" value="0.38645833333333335" />
       </map>
     </option>

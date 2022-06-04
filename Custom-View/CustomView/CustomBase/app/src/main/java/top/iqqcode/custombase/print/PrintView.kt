@@ -231,5 +231,5 @@ class PrintView @JvmOverloads constructor(
         rotatingJob.cancel()
     }
 
-    fun Float.toRadians() = this / 180 * PI.toFloat()
+    private fun Float.toRadians() = this / 180 * PI.toFloat()
 }
