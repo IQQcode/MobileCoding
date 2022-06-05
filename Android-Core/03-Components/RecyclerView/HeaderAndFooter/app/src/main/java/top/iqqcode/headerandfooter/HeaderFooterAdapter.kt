@@ -1,125 +1,114 @@
-package top.iqqcode.headerandfooter;
+package top.iqqcode.headerandfooter
 
-import android.content.Context;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
-
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
+import android.content.Context
+import androidx.recyclerview.widget.RecyclerView
+import android.view.LayoutInflater
+import android.view.View
+import android.widget.TextView
+import android.view.ViewGroup
 
 /**
  * @Author: jiazihui
  * @Date: 2022-06-05 08:22
  * @Description:
  */
-public class HeaderFooterAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+class HeaderFooterAdapter(private val mContext: Context) :
+    RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-    //item类型
-    public static final int ITEM_TYPE_HEADER = 0;
-    public static final int ITEM_TYPE_CONTENT = 1;
-    public static final int ITEM_TYPE_BOTTOM = 2;
-    //模拟数据
-    public String[] texts = {"java", "python", "C++", "Php", ".NET", "js", "Ruby", "Swift", "OC"};
-    private LayoutInflater mLayoutInflater;
-    private Context mContext;
-    /** 头部View个数 */
-    private final int mHeaderCount = 1;
-    /** 底部View个数 */
-    private final int mBottomCount = 1;
+    // 模拟数据
+    private var texts = arrayOf("java", "python", "C++", "Php", ".NET", "js", "Ruby", "Swift", "OC")
+    private val mLayoutInflater: LayoutInflater = LayoutInflater.from(mContext)
 
-    public HeaderFooterAdapter(Context context) {
-        mContext = context;
-        mLayoutInflater = LayoutInflater.from(context);
+    /** 头部View个数  */
+    private val mHeaderCount = 1
+
+    /** 底部View个数  */
+    private val mBottomCount = 1
+
+    // 内容长度
+    private fun getContentItemCount(): Int {
+        return texts.size
     }
 
-    //内容长度
-    public int getContentItemCount() {
-        return texts.length;
+    // 判断当前item是否是HeadView
+    fun isHeaderView(position: Int): Boolean {
+        return mHeaderCount != 0 && position < mHeaderCount
     }
 
-    //判断当前item是否是HeadView
-    public boolean isHeaderView(int position) {
-        return mHeaderCount != 0 && position < mHeaderCount;
+    // 判断当前item是否是FooterView
+    fun isBottomView(position: Int): Boolean {
+        return mBottomCount != 0 && position >= mHeaderCount + getContentItemCount()
     }
 
-    //判断当前item是否是FooterView
-    public boolean isBottomView(int position) {
-        return mBottomCount != 0 && position >= (mHeaderCount + getContentItemCount());
-    }
-
-
-    //判断当前item类型
-    @Override
-    public int getItemViewType(int position) {
-        int dataItemCount = getContentItemCount();
-        if (mHeaderCount != 0 && position < mHeaderCount) {
+    // 判断当前item类型
+    override fun getItemViewType(position: Int): Int {
+        val dataItemCount = getContentItemCount()
+        return if (mHeaderCount != 0 && position < mHeaderCount) {
             //头部View
-            return ITEM_TYPE_HEADER;
-        } else if (mBottomCount != 0 && position >= (mHeaderCount + dataItemCount)) {
+            ITEM_TYPE_HEADER
+        } else if (mBottomCount != 0 && position >= mHeaderCount + dataItemCount) {
             //底部View
-            return ITEM_TYPE_BOTTOM;
+            ITEM_TYPE_BOTTOM
         } else {
             //内容View
-            return ITEM_TYPE_CONTENT;
+            ITEM_TYPE_CONTENT
         }
     }
 
-    //内容 ViewHolder
-    public static class ContentViewHolder extends RecyclerView.ViewHolder {
-        private TextView textView;
+    // 内容 ViewHolder
+    class ContentViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val textView: TextView
 
-        public ContentViewHolder(View itemView) {
-            super(itemView);
-            textView = (TextView) itemView.findViewById(R.id.tv_item_text);
+        init {
+            textView = itemView.findViewById<View>(R.id.tv_item_text) as TextView
         }
     }
 
-    //头部 ViewHolder
-    public static class HeaderViewHolder extends RecyclerView.ViewHolder {
+    // 头部 ViewHolder
+    class HeaderViewHolder(itemView: View?) : RecyclerView.ViewHolder(
+        itemView!!
+    )
 
-        public HeaderViewHolder(View itemView) {
-            super(itemView);
+    // 底部 ViewHolder
+    class BottomViewHolder(itemView: View?) : RecyclerView.ViewHolder(
+        itemView!!
+    )
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
+        return when (viewType) {
+            ITEM_TYPE_HEADER -> {
+                HeaderViewHolder(mLayoutInflater.inflate(R.layout.header_view, parent, false))
+            }
+            ITEM_TYPE_BOTTOM -> {
+                BottomViewHolder(mLayoutInflater.inflate(R.layout.footer_view, parent, false))
+            }
+            else -> {
+                ContentViewHolder(mLayoutInflater.inflate(R.layout.item_view, parent, false))
+            }
         }
     }
 
-    //底部 ViewHolder
-    public static class BottomViewHolder extends RecyclerView.ViewHolder {
-
-        public BottomViewHolder(View itemView) {
-            super(itemView);
+    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
+        when (holder) {
+            is HeaderViewHolder -> {
+            }
+            is ContentViewHolder -> {
+                holder.textView.text = texts[position - mHeaderCount]
+            }
+            is BottomViewHolder -> {
+            }
         }
     }
 
-    @NonNull
-    @Override
-    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        if (viewType == ITEM_TYPE_HEADER) {
-            return new HeaderViewHolder(mLayoutInflater.inflate(R.layout.header_view, parent, false));
-        } else if (viewType == ITEM_TYPE_CONTENT) {
-            return new ContentViewHolder(mLayoutInflater.inflate(R.layout.item_view, parent, false));
-        } else if (viewType == ITEM_TYPE_BOTTOM) {
-            return new BottomViewHolder(mLayoutInflater.inflate(R.layout.footer_view, parent, false));
-        }
-        return null;
+    override fun getItemCount(): Int {
+        return mHeaderCount + getContentItemCount() + mBottomCount
     }
 
-    @Override
-    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-        if (holder instanceof HeaderViewHolder) {
-
-        } else if (holder instanceof ContentViewHolder) {
-            ((ContentViewHolder) holder).textView.setText(texts[position - mHeaderCount]);
-
-        } else if (holder instanceof BottomViewHolder) {
-
-        }
-    }
-
-    @Override
-    public int getItemCount() {
-        return mHeaderCount + getContentItemCount() + mBottomCount;
+    companion object {
+        // item类型
+        const val ITEM_TYPE_HEADER = 0
+        const val ITEM_TYPE_CONTENT = 1
+        const val ITEM_TYPE_BOTTOM = 2
     }
 
 }
