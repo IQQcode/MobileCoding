@@ -66,11 +66,12 @@ class EditTextWithClear @JvmOverloads constructor(context: Context, attrs: Attri
      * @param event MotionEvent
      * @return Boolean
      */
+    @SuppressLint("ClickableViewAccessibility")
     override fun onTouchEvent(event: MotionEvent?): Boolean {
         // let非空对象判断
         event?.let { e ->
 
-            iconDrawable?.let {
+            iconDrawable.let {
                 if (e.action == MotionEvent.ACTION_UP
                     && e.x < width + 20 // 触摸的横坐标小于整个控件(EditTextWithClear)的宽度
                     && e.x > width - it.intrinsicWidth - 20 // 触摸的横坐标大于❌icon的宽度
