@@ -8,11 +8,15 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/floatbutton.xml" value="0.1565" />
+        <entry key="app/src/main/res/layout/activity_bomb_view.xml" value="0.2930253623188406" />
         <entry key="app/src/main/res/layout/activity_full_container.xml" value="0.2930253623188406" />
+        <entry key="app/src/main/res/layout/activity_half_container.xml" value="0.2930253623188406" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_menu_window.xml" value="0.2930253623188406" />
         <entry key="app/src/main/res/layout/activity_scrolling.xml" value="0.2930253623188406" />
         <entry key="app/src/main/res/layout/fragment_demo.xml" value="0.2930253623188406" />
         <entry key="app/src/main/res/layout/fragment_main.xml" value="0.2930253623188406" />
+        <entry key="app/src/main/res/layout/item_popup_view.xml" value="0.2930253623188406" />
       </map>
     </option>
   </component>

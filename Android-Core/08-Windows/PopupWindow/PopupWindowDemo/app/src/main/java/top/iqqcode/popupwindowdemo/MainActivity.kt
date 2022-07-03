@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import top.iqqcode.popupwindowdemo.databinding.ActivityMainBinding
 import top.iqqcode.popupwindowdemo.full.FullContainerActivity
+import top.iqqcode.popupwindowdemo.menus.MenuWindowActivity
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -26,7 +27,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 startActivity(Intent(this@MainActivity, FullContainerActivity::class.java))
             }
             R.id.buttonMenu -> {
-                // startActivity(Intent(this@MainActivity, MainActivity::class.java))
+                startActivity(Intent(this@MainActivity, MenuWindowActivity::class.java))
+            }
+            R.id.buttonDialog -> {
+                startActivity(Intent(this@MainActivity, HalfContainerActivity::class.java))
             }
         }
     }

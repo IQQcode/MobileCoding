@@ -32,16 +32,19 @@ object ShowPopupWindowUtils {
         y: Int,
     ): Boolean {
         if (window != null && parent != null) {
-            if (isActivityFinished(parent.context)) {
-                return false;
-            }
-            if (isTokenValid(parent)) {
-                try {
-                    window.showAtLocation(parent, gravity, x, y)
-                } catch (e: Exception) {
-
-                }
-            }
+//            if (isActivityFinished(parent.context)) {
+//                return false;
+//            }
+//            if (isTokenValid(parent)) {
+//                try {
+//                    window.showAtLocation(parent, gravity, x, y)
+//                    return true
+//                } catch (e: Exception) {
+//
+//                }
+//            }
+            window.showAtLocation(parent, gravity, x, y)
+            return true
         }
         return false
     }
@@ -61,6 +64,7 @@ object ShowPopupWindowUtils {
             if (isTokenValid(anchor)) {
                 try {
                     window.showAsDropDown(anchor)
+                    return true
                 } catch (e: Exception) {
 
                 }
@@ -91,6 +95,7 @@ object ShowPopupWindowUtils {
             if (isTokenValid(anchor)) {
                 try {
                     window.showAsDropDown(anchor)
+                    return true
                 } catch (e: Exception) {
 
                 }
@@ -129,10 +134,12 @@ object ShowPopupWindowUtils {
 
     private fun isTokenValid(view: View?): Boolean {
         if (view != null) {
-            val binder: Binder = view.windowToken as Binder
+            val binder: Binder? = view.windowToken as? Binder
             try {
-                if (binder.isBinderAlive && binder.pingBinder()) {
-                    return true
+                if (binder != null) {
+                    if (binder.isBinderAlive && binder.pingBinder()) {
+                        return true
+                    }
                 }
             } catch (e: Exception) {
                 e.stackTrace

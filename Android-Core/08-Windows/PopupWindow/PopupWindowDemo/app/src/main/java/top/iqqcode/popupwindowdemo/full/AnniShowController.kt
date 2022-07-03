@@ -1,11 +1,15 @@
 package top.iqqcode.popupwindowdemo.full
 
+import android.annotation.SuppressLint
 import android.content.Context
-import android.view.Gravity
-import android.view.ViewGroup
-import android.widget.FrameLayout
-import android.widget.PopupWindow
-
+import android.graphics.Rect
+import android.graphics.drawable.ColorDrawable
+import android.view.*
+import android.widget.*
+import com.airbnb.lottie.LottieAnimationView
+import top.iqqcode.popupwindowdemo.R
+import top.iqqcode.popupwindowdemo.alive.BombView
+import java.util.*
 
 /**
  * @Author: jiazihui
@@ -19,15 +23,20 @@ class AnniShowController(context: Context) {
     private lateinit var mContentView: FrameLayout
     private var mGravity = Gravity.NO_GRAVITY
 
+    private lateinit var mBombView: BombView
+
     private fun initContentView() {
         mContentView = FrameLayout(mContext)
         mContentView.layoutParams = ViewGroup.LayoutParams(
-            ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)
+            ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT)
+        mBombView = BombView(mContext)
         val layoutParams = FrameLayout.LayoutParams(
             ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT)
-        // mContentView.addView(mEjectionAnimationView)
+        layoutParams.gravity = Gravity.CENTER
+        mContentView.addView(mBombView, layoutParams)
     }
 
+    @SuppressLint("ResourceAsColor")
     private fun initPopUpWindow() {
         popupWindow = PopupWindow()
         popupWindow.contentView = mContentView
@@ -36,6 +45,7 @@ class AnniShowController(context: Context) {
         popupWindow.isOutsideTouchable = false
         popupWindow.isFocusable = false
         popupWindow.isTouchable = false
+        // popupWindow.setBackgroundDrawable(ColorDrawable(R.color.pop_bg))
     }
 
     fun setGravity(gravity: Int) {
@@ -50,9 +60,30 @@ class AnniShowController(context: Context) {
         popupWindow.isClippingEnabled = clippingEnable
     }
 
+    /**
+     * 显示弹窗
+     * @param parent 弹窗显示位置基于的父view
+     */
+    fun show(parent: View?, rect: Rect) {
+        playAnimation(parent, rect)
+    }
+
+    private fun playAnimation(parent: View?, rect: Rect) {
+        if (ShowPopupWindowUtils.showPopupWindowAtLocation(popupWindow, parent, mGravity, 0, 0)) {
+            mBombView.startAnim()
+        }
+    }
+
+    fun stop() {
+        mBombView.setOnBombAnimatorListener {
+            if (popupWindow.isShowing) {
+                popupWindow.dismiss()
+            }
+        }
+    }
+
     init {
         initContentView()
         initPopUpWindow()
-
     }
 }

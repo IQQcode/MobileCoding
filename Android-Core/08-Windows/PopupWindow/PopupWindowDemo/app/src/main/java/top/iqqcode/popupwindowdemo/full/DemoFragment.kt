@@ -4,31 +4,41 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.annotation.Nullable
 import androidx.fragment.app.Fragment
+import com.airbnb.lottie.LottieAnimationView
 import top.iqqcode.popupwindowdemo.R
+import top.iqqcode.popupwindowdemo.alive.BombView
+import top.iqqcode.popupwindowdemo.databinding.FragmentDemoBinding
 
 class DemoFragment : Fragment() {
 
-    private var rootView: View? = null
+    private lateinit var binding: FragmentDemoBinding
 
     @Nullable
     override fun onCreateView(
         inflater: LayoutInflater,
         @Nullable container: ViewGroup?,
         @Nullable savedInstanceState: Bundle?,
-    ): View? {
-        rootView = inflater.inflate(R.layout.fragment_demo, container, false)
-        return rootView
+    ): View {
+        binding = FragmentDemoBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     @Deprecated("Deprecated in Java")
     override fun onActivityCreated(@Nullable savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        val textView = rootView!!.findViewById<TextView>(R.id.text_view)
+        val textView = binding.textView
         val text = if (arguments != null) requireArguments().getString("text") else null
         textView.text = text
+
+        val mLottieView = binding.animationView
+        // 设置动画JSON文件
+        mLottieView.setAnimation(R.raw.designer)
+        // 设置循环播放
+        mLottieView.repeatCount = -1
+        // 播放动画
+        mLottieView.playAnimation()
     }
 
     companion object {

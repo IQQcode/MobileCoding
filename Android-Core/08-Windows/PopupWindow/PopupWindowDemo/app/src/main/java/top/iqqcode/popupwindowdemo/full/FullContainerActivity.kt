@@ -2,6 +2,7 @@ package top.iqqcode.popupwindowdemo.full
 
 import android.content.res.ColorStateList
 import android.graphics.Color
+import android.graphics.Rect
 import android.graphics.Typeface
 import android.os.Bundle
 import android.widget.TextView
@@ -19,7 +20,6 @@ import top.iqqcode.popupwindowdemo.databinding.ActivityFullContainerBinding
 
 /**
  * Material ViewPager2 + TabLayout测试页面切换
- *
  * @constructor Create empty Full container activity
  */
 class FullContainerActivity : AppCompatActivity() {
@@ -34,7 +34,6 @@ class FullContainerActivity : AppCompatActivity() {
     private val normalColor: Int = Color.parseColor("#666666")
     private val activeSize = 20
     private val normalSize = 14
-    private val fragments: ArrayList<Fragment>? = null
     private var mediator: TabLayoutMediator? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -82,16 +81,25 @@ class FullContainerActivity : AppCompatActivity() {
     }
 
     private fun initFloatingIcon() {
-        mFloatView.setOnLongClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+        mFloatView.setOnClickListener {
+            showWindowAnimation()
+            Snackbar.make(it, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
-            true
         }
+    }
+
+    private fun showWindowAnimation() {
+        val anniShowController = AnniShowController(this);
+        anniShowController.setClippingEnable(false)
+        val rect = Rect()
+        mFloatView.getGlobalVisibleRect(rect)
+        anniShowController.show(this.findViewById(android.R.id.content), rect)
+        anniShowController.stop();
     }
 
     private val changeCallback: OnPageChangeCallback = object : OnPageChangeCallback() {
         override fun onPageSelected(position: Int) {
-            //可以来设置选中时tab的大小
+            // 可以来设置选中时tab的大小
             val tabCount = tabLayout.tabCount
             for (i in 0 until tabCount) {
                 val tab = tabLayout.getTabAt(i)
