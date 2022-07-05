@@ -35,6 +35,7 @@
         android:id="@+id/frameContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
         android:layout_below="@id/tab_layout">
 
         <!-- ViewPager2内部通过RecyclerView，所以需要通过orientation来设置页面切换方向-->

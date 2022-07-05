@@ -22,9 +22,9 @@ class HalfContainerActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val rootView = binding.root
-        binding.rootButton.setOnClickListener {
-            initPopWindow(it)
-        }
+//        binding.rootButton.setOnClickListener {
+//            initPopWindow(it)
+//        }
     }
 
     private fun initPopWindow(v: View) {
