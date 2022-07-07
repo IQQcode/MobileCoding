@@ -7,10 +7,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/layout/activity_frame_animation.xml" value="0.322463768115942" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.322463768115942" />
-        <entry key="app/src/main/res/layout/activity_object_animation.xml" value="0.322463768115942" />
-        <entry key="app/src/main/res/layout/activity_view_animation.xml" value="0.322463768115942" />
+        <entry key="app/src/main/res/drawable/cursor_style.xml" value="0.1635" />
+        <entry key="app/src/main/res/drawable/shape_search_bg.xml" value="0.1635" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.3129528985507246" />
       </map>
     </option>
   </component>
