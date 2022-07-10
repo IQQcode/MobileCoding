@@ -13,6 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FlexibleDemo"
         tools:targetApi="31">
+        <activity android:name=".TranslationActivity"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">
