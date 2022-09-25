@@ -7,8 +7,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/person_center_action_drawable_1.xml" value="0.213" />
         <entry key="app/src/main/res/layout/aaa.xml" value="0.2848731884057971" />
+        <entry key="app/src/main/res/layout/activity_corner_view.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_glide_load.xml" value="0.2848731884057971" />
+        <entry key="app/src/main/res/layout/activity_layout_param.xml" value="0.26403985507246375" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.31567028985507245" />
         <entry key="app/src/main/res/layout/head_custom_image_view.xml" value="0.19630192502532928" />
       </map>

@@ -19,12 +19,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(binding.getRoot());
 
         binding.buttonGlide01.setOnClickListener(this);
+        binding.buttonFresco01.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
         if (view.getId() == R.id.buttonGlide01) {
             startActivity(new Intent(MainActivity.this, GlideLoadActivity.class));
+        } else if (view.getId() == R.id.buttonFresco01) {
+            startActivity(new Intent(MainActivity.this, CornerViewActivity.class));
         }
     }
 }
