@@ -23,6 +23,7 @@ import com.bumptech.glide.request.RequestOptions;
 import com.bumptech.glide.request.target.Target;
 
 import top.iqqcode.gifload.databinding.ActivityGlideLoadBinding;
+import top.iqqcode.gifload.util.SharedPreferencesUtil;
 
 public class GlideLoadActivity extends AppCompatActivity implements View.OnClickListener {
 

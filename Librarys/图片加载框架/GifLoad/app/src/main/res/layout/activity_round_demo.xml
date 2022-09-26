@@ -1,0 +1,42 @@
+<FrameLayout android:id="@+id/miniTimer"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    app:layout_constraintBottom_toBottomOf="@+id/frameLayout"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.cardview.widget.CardView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:translationX="10dp"
+        android:translationY="-10dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="10dp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:background="@drawable/person_center_action_drawable_1"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingEnd="10dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="10dp"
+            android:paddingStart="5dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/miniTimerText"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textColor="#000000"
+                android:textSize="12dp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</FrameLayout>

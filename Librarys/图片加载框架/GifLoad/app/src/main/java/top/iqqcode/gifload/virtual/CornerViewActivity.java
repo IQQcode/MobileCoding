@@ -1,39 +1,35 @@
-package top.iqqcode.gifload;
+package top.iqqcode.gifload.virtual;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.graphics.Matrix;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.RequestBuilder;
 import com.bumptech.glide.load.DataSource;
 import com.bumptech.glide.load.engine.GlideException;
-import com.bumptech.glide.load.resource.bitmap.CenterCrop;
-import com.bumptech.glide.load.resource.bitmap.GranularRoundedCorners;
-import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
-import com.bumptech.glide.request.RequestFutureTarget;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.RequestOptions;
 import com.bumptech.glide.request.target.Target;
-import com.bumptech.glide.request.transition.Transition;
-import com.google.android.material.shape.RoundedCornerTreatment;
+
+import top.iqqcode.gifload.R;
+import top.iqqcode.gifload.util.RoundedCornersTransform;
 
 public class CornerViewActivity extends AppCompatActivity {
 
-    private RelativeLayout mContainer;
+    private FrameLayout mContainer;
     private ImageView mVirtualHeadImage;
     private ImageView mImageView;
     private ImageView mImageViewTest;
 
     private FrameLayout mVirtualContainer02;
     private ImageView mVirtualHeadImage02;
+
+    private FrameLayout mVirtualContainer03;
+    private ImageView mVirtualHeadImage03;
 
 
     private final String man_url = "https://iqqcode-blog.oss-cn-beijing.aliyuncs.com/img-2022/7aec54e736d12f2e531ac8bf0ac2d562843568d6.gif";
@@ -54,10 +50,15 @@ public class CornerViewActivity extends AppCompatActivity {
 
         mVirtualContainer02 = findViewById(R.id.virtualHeadContainer02);
         mVirtualHeadImage02 = findViewById(R.id.virtualHeadImage02);
+        mVirtualContainer03 = findViewById(R.id.virtualHeadContainer03);
+        mVirtualHeadImage03 = findViewById(R.id.virtualHeadImage03);
 
         loadVirtualBackGround();
 
-        loadRound();
+        loadRound02();
+
+        loadRound03();
+
     }
 
     private void loadVirtualBackGround() {
@@ -67,7 +68,7 @@ public class CornerViewActivity extends AppCompatActivity {
                 .error(R.drawable.virtual_dynamic_background);
 
         Glide.with(this)
-                .load(man_url)
+                .load(woman_url)
                 .apply(options)
                 .listener(new RequestListener<Drawable>() {
                     @Override
@@ -97,9 +98,9 @@ public class CornerViewActivity extends AppCompatActivity {
         Glide.with(this).load(man_url).into(mImageViewTest);
     }
 
-    private void loadRound() {
+    private void loadRound02() {
         RequestOptions options = new RequestOptions()
-                .transform(new RoundedCornersTransform(this, 10.3f, 10.3f, 0, 0))
+                .transform(new RoundedCornersTransform(this, 30f, 30f, 0, 0))
                 .placeholder(R.drawable.virtual_dynamic_background)
                 .error(R.drawable.virtual_dynamic_background);
 
@@ -107,5 +108,17 @@ public class CornerViewActivity extends AppCompatActivity {
                 .load(woman_url)
                 .apply(options)
                 .into(mVirtualHeadImage02);
+    }
+
+    private void loadRound03() {
+        RequestOptions options = new RequestOptions()
+                .transform(new RoundedCornersTransform(this, 30f, 30f, 0, 0))
+                .placeholder(R.drawable.virtual_dynamic_background)
+                .error(R.drawable.virtual_dynamic_background);
+
+        Glide.with(this)
+                .load(woman_url)
+                .apply(options)
+                .into(mVirtualHeadImage03);
     }
 }

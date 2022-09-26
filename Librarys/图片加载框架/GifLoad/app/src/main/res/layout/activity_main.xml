@@ -31,14 +31,25 @@
         app:layout_constraintVertical_bias="0.19" />
 
     <Button
-        android:id="@+id/buttonFresco01"
+        android:id="@+id/buttonMatrix"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Fresco加载Gif"
+        android:text="Gif图像适配"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonGlide01"
         app:layout_constraintVertical_bias="0.073" />
+
+    <Button
+        android:id="@+id/buttonCorner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Glide圆角裁剪"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMatrix"
+        app:layout_constraintVertical_bias="0.119" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

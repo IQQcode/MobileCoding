@@ -1,4 +1,4 @@
-package top.iqqcode.gifload;
+package top.iqqcode.gifload.util;
 
 import android.content.res.Resources;
 import android.graphics.Bitmap;
