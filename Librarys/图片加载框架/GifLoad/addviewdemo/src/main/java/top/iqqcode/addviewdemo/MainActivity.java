@@ -2,7 +2,6 @@ package top.iqqcode.addviewdemo;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
-import androidx.core.graphics.ColorUtils;
 
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -14,11 +13,17 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+/**
+ * @author jiazihui
+ */
 public class MainActivity extends AppCompatActivity {
 
     private RelativeLayout mRootView;
     private View mTabLayoutTest;
     private TextView mHotTipBubble;
+
+    private LinearLayout mHotBar;
+    private View mRedHot;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,18 +31,26 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mRootView = findViewById(R.id.root_view);
+        mHotBar = findViewById(R.id.hot_bar);
+        mRedHot = findViewById(R.id.hot_red_tip);
+        mHotBar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mRedHot.setVisibility(View.GONE);
+            }
+        });
 
-        mTabLayoutTest = new View(this);
-        mTabLayoutTest.setBackgroundColor(R.drawable.ic_launcher_background);
-        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
-                DensityHelper.dip2px(this, 200),
-                DensityHelper.dip2px(this, 50));
-        params.addRule(RelativeLayout.CENTER_IN_PARENT);
-        mTabLayoutTest.setLayoutParams(params);
-        mRootView.addView(mTabLayoutTest);
-
-        // initView();
-        updateContainerView();
+//        mTabLayoutTest = new View(this);
+//        mTabLayoutTest.setBackgroundColor(R.drawable.ic_launcher_background);
+//        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
+//                DensityHelper.dip2px(this, 200),
+//                DensityHelper.dip2px(this, 50));
+//        params.addRule(RelativeLayout.CENTER_IN_PARENT);
+//        mTabLayoutTest.setLayoutParams(params);
+//        mRootView.addView(mTabLayoutTest);
+//
+//        // initView();
+//        updateContainerView();
     }
 
     private void updateContainerView() {
@@ -77,26 +90,25 @@ public class MainActivity extends AppCompatActivity {
 //        mRootView.addView(tabContainer);
 //    }
 //
-//    private void initHotTipBubbleView() {
-//        mHotTipBubble = new TextView(this);
-//        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
-//                ViewGroup.LayoutParams.WRAP_CONTENT,
-//                ViewGroup.LayoutParams.WRAP_CONTENT);
-//        params.bottomMargin = DensityHelper.dip2px(this, 8);
-//        mHotTipBubble.setGravity(Gravity.CENTER);
-//        mHotTipBubble.setTextSize(DensityHelper.dip2px(this, 13));
-//        mHotTipBubble.setLayoutParams(params);
-//        mHotTipBubble.setSingleLine();
-//        mHotTipBubble.setGravity(Gravity.CENTER);
-////        mHotTipBubble.setPadding(
-////                UtilHelper.getDimenPixelSize(R.dimen.tbds9), 0, UtilHelper.getDimenPixelSize(R.dimen.tbds9), 0);
-//        mHotTipBubble.setTextSize(DensityHelper.dip2px(this, 5));
-//        mHotTipBubble.setText("贾自慧");
-//        // setBubbleBackground();
-//    }
-//
-//    private void setBubbleBackground() {
-//        Drawable backDrawable = ContextCompat.getDrawable(this, R.drawable.hot_tip);
-//        mHotTipBubble.setBackground(backDrawable);
-//    }
+
+    private void initHotTipBubbleView() {
+        mHotTipBubble = new TextView(this);
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+                ViewGroup.LayoutParams.WRAP_CONTENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT);
+        params.bottomMargin = DensityHelper.dip2px(this, 8);
+        mHotTipBubble.setGravity(Gravity.CENTER);
+        mHotTipBubble.setTextSize(DensityHelper.dip2px(this, 13));
+        mHotTipBubble.setLayoutParams(params);
+        mHotTipBubble.setSingleLine();
+        mHotTipBubble.setGravity(Gravity.CENTER);
+        mHotTipBubble.setTextSize(DensityHelper.dip2px(this, 5));
+        mHotTipBubble.setText("贾自慧");
+        setBubbleBackground();
+    }
+
+    private void setBubbleBackground() {
+        Drawable backDrawable = ContextCompat.getDrawable(this, R.drawable.hot_tip);
+        mHotTipBubble.setBackground(backDrawable);
+    }
 }

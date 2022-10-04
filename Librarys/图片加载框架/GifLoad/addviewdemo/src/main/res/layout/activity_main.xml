@@ -8,7 +8,40 @@
 
     <RelativeLayout
         android:id="@+id/root_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:background="#c2efe2"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:id="@+id/hot_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:background="#efc2cf"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的贴吧" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/hot_red_tip"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_toRightOf="@id/hot_bar"
+            android:background="#e74c3c" />
+
+    </RelativeLayout>
 
 </RelativeLayout>
