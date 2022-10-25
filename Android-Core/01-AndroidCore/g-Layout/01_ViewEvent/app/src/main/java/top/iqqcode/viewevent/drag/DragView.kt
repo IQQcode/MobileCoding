@@ -32,6 +32,7 @@ class DragView(context: Context, attributeSet: AttributeSet) : ImageView(context
     /** 手指点击移动在屏幕上的坐标  */
     private var downX = 0f
     private var downY = 0f
+
     @SuppressLint("ClickableViewAccessibility")
     override fun onTouchEvent(event: MotionEvent): Boolean {
         super.onTouchEvent(event)

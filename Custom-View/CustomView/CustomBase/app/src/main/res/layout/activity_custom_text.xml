@@ -22,19 +22,6 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
-    <top.iqqcode.custombase.edittext.EditTextWithClear
-        android:id="@+id/editTextWithClear"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="308dp"
-        android:ems="10"
-        android:hint="Custom EditText"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="300dp"
         android:layout_height="wrap_content"
@@ -43,7 +30,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextWithClear"
+        app:layout_constraintTop_toBottomOf="@+id/editTextName"
         tools:ignore="MissingConstraints">
 
         <com.google.android.material.textfield.TextInputEditText

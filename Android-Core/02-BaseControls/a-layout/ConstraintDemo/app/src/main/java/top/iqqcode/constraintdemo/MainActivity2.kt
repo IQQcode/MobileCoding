@@ -1,8 +1,7 @@
-package top.iqqcode.custombase
+package top.iqqcode.constraintdemo
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.MotionEvent
 
 class MainActivity2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -2,8 +2,6 @@ package top.iqqcode.custombase.print
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import top.iqqcode.custombase.R
-import top.iqqcode.custombase.databinding.ActivityMainBinding
 import top.iqqcode.custombase.databinding.ActivityPrintBinding
 
 class PrintActivity : AppCompatActivity() {

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ConstraintDemo</string>
+    <string name="layout_description_tip">约束布局辅助线学习</string>
+    <string name="username_edit_text">登录</string>
+    <string name="user_head_photo">用户名</string>
+    <string name="password_edit_text">密 码</string>
+    <string name="user_head_icon">userHeadIcon</string>
+
+    <string name="warehouse">iqqcode</string>
+    <string name="hospital">Beijing-Haidian</string>
+    <string name="lorem_ipsum">The final step in defining the Barrier is to tell it.which Views we need to position it relative to.We don’t use a constrain, there because a constraint isactually a one-to-one mapping,and here we have multiple Views.For a Barrier we need to define multiple Views as referenced IDs,which we can do by dragging them within the component tree</string>
+
+</resources>
