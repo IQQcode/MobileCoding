@@ -39,7 +39,7 @@
 
     </RelativeLayout>
 
-    <top.iqqcode.custombase.floats.demo01.ExpandButtonLayout
+    <top.iqqcode.custombase.floats.demo.ExpandButtonLayout
         android:id="@+id/expanded_button_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

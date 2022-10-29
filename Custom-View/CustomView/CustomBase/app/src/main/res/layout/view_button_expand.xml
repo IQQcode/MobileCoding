@@ -18,7 +18,7 @@
         android:src="@mipmap/icon_expend_entrance_round" />
 
     <!-- android:background="@drawable/cool_background_small" -->
-    <top.iqqcode.custombase.floats.demo01.MyLinearLayout
+    <top.iqqcode.custombase.floats.demo.MyLinearLayout
         android:id="@+id/mLinearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -56,20 +56,6 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="gone">
-
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginLeft="12dp"
-                android:layout_marginRight="12dp"
-                android:background="@drawable/gradual_change_bg"
-                android:scaleType="fitXY" />
-        </LinearLayout>
-
-    </top.iqqcode.custombase.floats.demo01.MyLinearLayout>
+    </top.iqqcode.custombase.floats.demo.MyLinearLayout>
 
 </RelativeLayout>

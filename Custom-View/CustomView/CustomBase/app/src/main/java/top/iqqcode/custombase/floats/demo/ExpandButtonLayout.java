@@ -1,14 +1,11 @@
-package top.iqqcode.custombase.floats.demo01;
+package top.iqqcode.custombase.floats.demo;
 
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.Rect;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
-import android.graphics.drawable.ShapeDrawable;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -20,8 +17,6 @@ import android.view.animation.RotateAnimation;
 import android.view.animation.ScaleAnimation;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
-
-import androidx.core.content.ContextCompat;
 
 import top.iqqcode.custombase.R;
 
@@ -64,15 +59,15 @@ public class ExpandButtonLayout extends RelativeLayout implements Animation.Anim
             public void onGlobalLayout() {
                 allHeight = getHeight();
                 mLinearLayoutWidth = mLinearLayout.getWidth();
-                Log.e("IQQCODE", "Width=" + mLinearLayoutWidth + ",allHeight=" + allHeight);
+                Log.e("JIAZIHUI", "Width=" + mLinearLayoutWidth + ", allHeight=" + allHeight);
                 savePaddingLeft = mLinearLayout.getPaddingLeft();
                 savePaddingRight = mLinearLayout.getPaddingRight();
-                ViewGroup.LayoutParams vglp = mLinearLayout.getLayoutParams();
-                if (vglp instanceof ViewGroup.MarginLayoutParams) {
-                    ViewGroup.MarginLayoutParams marginVglp = (ViewGroup.MarginLayoutParams) vglp;
+                ViewGroup.LayoutParams params = mLinearLayout.getLayoutParams();
+                if (params instanceof ViewGroup.MarginLayoutParams) {
+                    ViewGroup.MarginLayoutParams marginVglp = (ViewGroup.MarginLayoutParams) params;
                     saveMarginLeft = marginVglp.leftMargin;
                     saveMarginRight = marginVglp.rightMargin;
-                    Log.e("IQQCODE", "vglp saveMarginLeft=" + saveMarginLeft + " saveMarginRight=" + saveMarginRight);
+                    Log.e("JIAZIHUI", "vglp saveMarginLeft=" + saveMarginLeft + " saveMarginRight=" + saveMarginRight);
                 }
                 mLinearLayout.getViewTreeObserver().removeOnGlobalLayoutListener(this);
                 initBackGround();

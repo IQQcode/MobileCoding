@@ -1,4 +1,4 @@
-package top.iqqcode.custombase.floats.demo01;
+package top.iqqcode.custombase.entrance;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -6,29 +6,28 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 
 /**
  * @Author: jiazihui
  * @Date: 2022-10-29 10:37
  * @Description:
  */
-public class MyLinearLayout extends LinearLayout {
+public class CardViewLayout extends androidx.cardview.widget.CardView {
 
-    private ViewGroup.MarginLayoutParams marginVglp;
+    private MarginLayoutParams marginParams;
 
-    public MyLinearLayout(Context context) {
+    public CardViewLayout(Context context) {
         super(context);
     }
 
-    public MyLinearLayout(Context context, @Nullable AttributeSet attrs) {
+    public CardViewLayout(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public MyLinearLayout(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public CardViewLayout(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
-
-
 
     public void setWidth(int width) {
         ViewGroup.LayoutParams lp = getLayoutParams();
@@ -48,23 +47,23 @@ public class MyLinearLayout extends LinearLayout {
 
     public void setMarginLeft(int left) {
         checkMarginLayoutParams();
-        if (marginVglp != null) {
-            marginVglp.leftMargin = left;
+        if (marginParams != null) {
+            marginParams.leftMargin = left;
         }
     }
 
     public void setMarginRight(int right) {
         checkMarginLayoutParams();
-        if (marginVglp != null) {
-            marginVglp.rightMargin = right;
+        if (marginParams != null) {
+            marginParams.rightMargin = right;
         }
     }
 
     private void checkMarginLayoutParams() {
-        if (marginVglp == null) {
+        if (marginParams == null) {
             ViewGroup.LayoutParams vglp = getLayoutParams();
-            if (vglp instanceof ViewGroup.MarginLayoutParams) {
-                marginVglp = (ViewGroup.MarginLayoutParams) vglp;
+            if (vglp instanceof MarginLayoutParams) {
+                marginParams = (MarginLayoutParams) vglp;
             }
         }
     }

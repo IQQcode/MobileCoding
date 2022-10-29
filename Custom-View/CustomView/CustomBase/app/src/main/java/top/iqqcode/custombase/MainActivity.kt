@@ -7,7 +7,7 @@ import android.view.View
 import top.iqqcode.custombase.databinding.ActivityMainBinding
 import top.iqqcode.custombase.edittext.CustomTextActivity
 import top.iqqcode.custombase.entrance.FrsFloatEntranceActivity
-import top.iqqcode.custombase.floats.anni.ExpendBaseDemoActivity
+import top.iqqcode.custombase.expend.ExpendBaseDemoActivity
 import top.iqqcode.custombase.expend.ExpendClickActivity
 import top.iqqcode.custombase.floats.FloatExpandActivity
 import top.iqqcode.custombase.floats.IMGroupEntryActivity
