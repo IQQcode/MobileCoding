@@ -7,7 +7,7 @@ import android.content.Context
  * @Date: 2022-10-22 22:01
  * @Description:
  */
-object DensityUtil {
+object UtilHelper {
     /**
      * 根据手机的分辨率从 dp 的单位 转成为 px(像素)
      */

@@ -7,7 +7,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import top.iqqcode.custombase.databinding.ActivityExpendClickBinding
-import top.iqqcode.custombase.util.DensityUtil
+import top.iqqcode.custombase.util.UtilHelper
 
 
 /**
@@ -28,14 +28,14 @@ class ExpendClickActivity : AppCompatActivity() {
             expendTouchArea(binding.clickTargetView,
                 0,
                 0,
-                DensityUtil.dip2px(this, 100F),
-                DensityUtil.dip2px(this, 100F))
+                UtilHelper.dip2px(this, 100F),
+                UtilHelper.dip2px(this, 100F))
         }
 
         binding.mParentRootView.setOnClickListener {
             expendTouchArea(binding.clickTargetView,
                 0, 0, 0,
-                DensityUtil.dip2px(this, 200F))
+                UtilHelper.dip2px(this, 200F))
         }
 
         binding.clickTargetView.setOnClickListener {

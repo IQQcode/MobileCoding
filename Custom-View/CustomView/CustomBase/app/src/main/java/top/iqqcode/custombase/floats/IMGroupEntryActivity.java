@@ -17,6 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import top.iqqcode.custombase.R;
+import top.iqqcode.custombase.floats.demo01.ExpandButtonLayout;
 
 /**
  * @author jiazihui
@@ -30,6 +31,9 @@ public class IMGroupEntryActivity extends AppCompatActivity implements View.OnCl
     private Button mToRightButton;
     private Button mResetButton;
     private TextView mBallText;
+
+    private ExpandButtonLayout mExpandButtonLayout;
+    private Button mTestButton01;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -50,10 +54,14 @@ public class IMGroupEntryActivity extends AppCompatActivity implements View.OnCl
         mResetButton = findViewById(R.id.button_to_reset);
         mToLeftButton = findViewById(R.id.button_to_left);
         mToRightButton = findViewById(R.id.button_to_right);
+        mExpandButtonLayout = findViewById(R.id.expanded_button_layout);
+        mTestButton01 = findViewById(R.id.button_to_test01);
+
         mToLeftButton.setOnClickListener(this);
         mToRightButton.setOnClickListener(this);
         mResetButton.setOnClickListener(this);
         mBallText.setOnClickListener(this);
+        mTestButton01.setOnClickListener(this);
     }
 
     private void setViews() {
@@ -139,6 +147,8 @@ public class IMGroupEntryActivity extends AppCompatActivity implements View.OnCl
             animator.start();
         } else if (id == R.id.mTextBall) {
             Toast.makeText(context, "文字点击啦", Toast.LENGTH_SHORT).show();
+        } else if (id == R.id.button_to_test01) {
+            mExpandButtonLayout.toggle();
         }
     }
 

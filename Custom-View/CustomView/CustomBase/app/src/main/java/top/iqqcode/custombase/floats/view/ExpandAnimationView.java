@@ -1,4 +1,4 @@
-package top.iqqcode.custombase.floats;
+package top.iqqcode.custombase.floats.view;
 
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
@@ -23,7 +23,7 @@ import top.iqqcode.custombase.R;
 /**
  * @Author: jiazihui
  * @Date: 2022-10-25 20:23
- * @Description:
+ * @Description: https://blog.csdn.net/CarsonWoo/article/details/108175992?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522166671507816782417096607%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&request_id=166671507816782417096607&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~rank_v31_ecpm-2-108175992-null-null.142^v59^pc_rank_34_2,201^v3^control,213^v1^control&utm_term=%20%20%20%20%20%20%20%20final%20ObjectAnimator%20rotateAnimation%20%3D%20ObjectAnimator.ofFloat%28mImageView%2C%20rotation%2C%20-45F%2C%200F%29%3B&spm=1018.2226.3001.4187
  */
 public class ExpandAnimationView extends LinearLayout {
 

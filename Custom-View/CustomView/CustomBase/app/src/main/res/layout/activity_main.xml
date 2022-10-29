@@ -59,16 +59,53 @@
             app:layout_constraintTop_toBottomOf="@+id/printButton" />
 
         <Button
-            android:id="@+id/groupEntryButton"
+            android:id="@+id/floatExpendButton"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:text="群聊Demo入口"
+            android:text="收缩浮层View"
             android:textAllCaps="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/expendButton" />
+
+        <Button
+            android:id="@+id/groupEntryButton"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="收缩浮层动画Demo"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/floatExpendButton" />
+
+        <Button
+            android:id="@+id/floatExpendBaseDemo"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="背景图拉伸Demo"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/groupEntryButton" />
+
+        <Button
+            android:id="@+id/frsFloatExpendDemo"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="收缩浮层动画Demo"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/floatExpendBaseDemo" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.core.widget.NestedScrollView>
