@@ -27,7 +27,6 @@ class PathFragment : Fragment() {
     }
 
     private fun initView() {
-        binding.textViewPath.text = "1234567890"
     }
 
 }

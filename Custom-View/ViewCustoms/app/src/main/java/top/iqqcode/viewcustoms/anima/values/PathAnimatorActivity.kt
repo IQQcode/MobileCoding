@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import top.iqqcode.viewcustoms.R
 import top.iqqcode.viewcustoms.base.FragmentExt
 import top.iqqcode.viewcustoms.base.OptFragment
+import top.iqqcode.viewcustoms.base.ReceiveOpt
 import top.iqqcode.viewcustoms.databinding.ActivityPointAnimatorBinding
 
 
@@ -13,21 +14,19 @@ import top.iqqcode.viewcustoms.databinding.ActivityPointAnimatorBinding
  *
  * @constructor Create empty Point animator activity
  */
-class PathAnimatorActivity : AppCompatActivity() {
+class PathAnimatorActivity : AppCompatActivity(), ReceiveOpt {
 
     private lateinit var binding: ActivityPointAnimatorBinding
     private lateinit var mOptFragment: OptFragment
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityPointAnimatorBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        receiveOpt()
+        initial()
     }
 
-    private fun receiveOpt() {
+    override fun initial() {
         mOptFragment = FragmentExt.createFragment(R.layout.fragment_path)
         FragmentExt.addFragment(
             this.supportFragmentManager,
