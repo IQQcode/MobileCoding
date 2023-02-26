@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".span.SpanActivity">
+
+
+    <TextView
+        android:id="@+id/spanTextViewDemo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:text="spanTextViewDemo"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.02" />
+
+    <TextView
+        android:id="@+id/spanTextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:text="spanTextView01"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.10" />
+
+    <TextView
+        android:id="@+id/spanTextView02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:text="spanTextView02"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.20" />
+
+
+    <TextView
+        android:id="@+id/spanTextView03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:text="spanTextView03"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.30" />
+
+
+    <TextView
+        android:id="@+id/spanTextView04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:text="spanTextView04"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.40" />
+
+    <TextView
+        android:id="@+id/spanTextView05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:text="spanTextView05"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.50" />
+
+    <TextView
+        android:id="@+id/spanTextView06"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:text="spanTextView06"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.60" />
+
+    <TextView
+        android:id="@+id/spanTextView07"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:text="spanTextView07"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.70" />
+
+    <TextView
+        android:id="@+id/spanTextView08"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:text="spanTextView08"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.80" />
+
+    <LinearLayout
+        android:id="@+id/spanContainer"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:text="spanTextView08"
+        android:layout_marginTop="15dp"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spanTextView08" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
