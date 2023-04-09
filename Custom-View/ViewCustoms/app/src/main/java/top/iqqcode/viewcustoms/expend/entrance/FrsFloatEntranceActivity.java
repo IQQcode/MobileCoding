@@ -1,6 +1,5 @@
-package top.iqqcode.viewcustoms.entrance;
+package top.iqqcode.viewcustoms.expend.entrance;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.animation.Animator;
@@ -21,10 +20,6 @@ import android.widget.AdapterViewFlipper;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
-import android.widget.ViewFlipper;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import top.iqqcode.viewcustoms.R;
 import top.iqqcode.viewcustoms.util.MockDataUtil;

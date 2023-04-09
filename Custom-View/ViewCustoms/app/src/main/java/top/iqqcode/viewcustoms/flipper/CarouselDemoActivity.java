@@ -4,18 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.animation.ObjectAnimator;
 import android.animation.PropertyValuesHolder;
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
-import android.view.animation.AccelerateDecelerateInterpolator;
 import android.widget.AdapterViewFlipper;
 import android.widget.Button;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import top.iqqcode.viewcustoms.R;
-import top.iqqcode.viewcustoms.entrance.ChatEntranceTestData;
 import top.iqqcode.viewcustoms.util.MockDataUtil;
 
 public class CarouselDemoActivity extends AppCompatActivity {

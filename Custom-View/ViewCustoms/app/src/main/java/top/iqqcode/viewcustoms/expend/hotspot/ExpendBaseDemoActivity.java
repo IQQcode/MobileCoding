@@ -1,4 +1,4 @@
-package top.iqqcode.viewcustoms.expend;
+package top.iqqcode.viewcustoms.expend.hotspot;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;

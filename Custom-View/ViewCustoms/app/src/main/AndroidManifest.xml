@@ -33,14 +33,14 @@
             android:name=".flipper.CarouselDemoActivity"
             android:exported="false" />
         <activity
-            android:name=".entrance.FrsFloatEntranceActivity"
+            android:name=".expend.entrance.FrsFloatEntranceActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".expend.ExpendBaseDemoActivity"
+            android:name=".expend.hotspot.ExpendBaseDemoActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -61,7 +61,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".expend.ExpendClickActivity"
+            android:name=".expend.hotspot.ExpendClickActivity"
             android:exported="false" />
         <activity
             android:name=".print.PrintActivity"

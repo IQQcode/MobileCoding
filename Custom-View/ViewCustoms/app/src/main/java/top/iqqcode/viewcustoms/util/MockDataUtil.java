@@ -5,7 +5,7 @@ import androidx.annotation.NonNull;
 import java.util.ArrayList;
 import java.util.List;
 
-import top.iqqcode.viewcustoms.entrance.ChatEntranceTestData;
+import top.iqqcode.viewcustoms.expend.entrance.ChatEntranceTestData;
 
 public class MockDataUtil {
 

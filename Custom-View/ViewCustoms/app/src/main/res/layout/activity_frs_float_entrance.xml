@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".entrance.FrsFloatEntranceActivity">
+    tools:context=".expend.entrance.FrsFloatEntranceActivity">
 
-    <top.iqqcode.viewcustoms.entrance.CardViewLayout
+    <top.iqqcode.viewcustoms.expend.entrance.CardViewLayout
         android:id="@+id/chat_group_entrance_float"
         android:layout_width="match_parent"
         android:layout_height="64dp"
@@ -137,7 +137,7 @@
 
         </RelativeLayout>
 
-    </top.iqqcode.viewcustoms.entrance.CardViewLayout>
+    </top.iqqcode.viewcustoms.expend.entrance.CardViewLayout>
 
     <RelativeLayout
         android:id="@+id/chat_entrance_float_collapse"

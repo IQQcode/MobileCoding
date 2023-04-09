@@ -15,7 +15,7 @@ import com.bumptech.glide.Glide;
 import java.util.List;
 
 import top.iqqcode.viewcustoms.R;
-import top.iqqcode.viewcustoms.entrance.ChatEntranceTestData;
+import top.iqqcode.viewcustoms.expend.entrance.ChatEntranceTestData;
 
 /**
  * @Author: jiazihui

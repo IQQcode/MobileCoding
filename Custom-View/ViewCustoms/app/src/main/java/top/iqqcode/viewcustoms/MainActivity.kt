@@ -9,9 +9,9 @@ import top.iqqcode.viewcustoms.databinding.ActivityMainBinding
 import top.iqqcode.viewcustoms.edittext.CustomTextActivity
 import top.iqqcode.viewcustoms.anima.rain.FallingActivity
 import top.iqqcode.viewcustoms.anima.values.PathAnimatorActivity
-import top.iqqcode.viewcustoms.entrance.FrsFloatEntranceActivity
-import top.iqqcode.viewcustoms.expend.ExpendBaseDemoActivity
-import top.iqqcode.viewcustoms.expend.ExpendClickActivity
+import top.iqqcode.viewcustoms.expend.entrance.FrsFloatEntranceActivity
+import top.iqqcode.viewcustoms.expend.hotspot.ExpendBaseDemoActivity
+import top.iqqcode.viewcustoms.expend.hotspot.ExpendClickActivity
 import top.iqqcode.viewcustoms.flipper.CarouselDemoActivity
 import top.iqqcode.viewcustoms.floats.FloatExpandActivity
 import top.iqqcode.viewcustoms.floats.IMGroupEntryActivity
