@@ -37,6 +37,9 @@ android {
 
 dependencies {
 
+    // Navigation
+    implementation 'androidx.navigation:navigation-fragment:2.4.1'
+
     // https://xingyun.xiaojukeji.com/docs/dokit/#/androidGuide
     debugImplementation 'io.github.didi.dokit:dokitx:3.5.0'
     releaseImplementation 'io.github.didi.dokit:dokitx-no-op:3.5.0'
@@ -52,7 +55,6 @@ dependencies {
     // Fresco
     implementation 'com.facebook.fresco:fresco:2.6.0'
 
-    implementation 'androidx.core:core-ktx:1.9.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.5.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'

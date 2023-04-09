@@ -12,6 +12,7 @@ import top.iqqcode.viewcustoms.anima.values.PathAnimatorActivity
 import top.iqqcode.viewcustoms.expend.entrance.FrsFloatEntranceActivity
 import top.iqqcode.viewcustoms.expend.hotspot.ExpendBaseDemoActivity
 import top.iqqcode.viewcustoms.expend.hotspot.ExpendClickActivity
+import top.iqqcode.viewcustoms.expend.spread.SpreadActivity
 import top.iqqcode.viewcustoms.flipper.CarouselDemoActivity
 import top.iqqcode.viewcustoms.floats.FloatExpandActivity
 import top.iqqcode.viewcustoms.floats.IMGroupEntryActivity
@@ -44,6 +45,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         binding.emotionLabel.setOnClickListener(this)
         binding.eggFalling.setOnClickListener(this)
         binding.pathAnimator.setOnClickListener(this)
+        binding.spreadButton.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -119,6 +121,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 Intent(
                     this@MainActivity,
                     PathAnimatorActivity::class.java
+                )
+            )
+            R.id.spreadButton -> startActivity(
+                Intent(
+                    this@MainActivity,
+                    SpreadActivity::class.java
                 )
             )
         }

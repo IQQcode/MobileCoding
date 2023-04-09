@@ -15,6 +15,9 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".expend.spread.SpreadActivity"
+            android:exported="false" />
+        <activity
             android:name=".anima.values.PathAnimatorActivity"
             android:exported="false" />
         <activity
