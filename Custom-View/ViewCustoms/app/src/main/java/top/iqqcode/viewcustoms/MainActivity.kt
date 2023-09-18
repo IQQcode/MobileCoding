@@ -54,8 +54,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 Intent(
                     this@MainActivity,
                     CustomTextActivity::class.java
+                ).setClassName(
+                    this@MainActivity,
+                    "top.iqqcode.viewcustoms.edittext.CustomTextActivity"
                 )
             )
+
             R.id.printButton -> startActivity(Intent(this@MainActivity, PrintActivity::class.java))
             R.id.expendButton -> startActivity(
                 Intent(
@@ -63,66 +67,77 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                     ExpendClickActivity::class.java
                 )
             )
+
             R.id.groupEntryButton -> startActivity(
                 Intent(
                     this@MainActivity,
                     IMGroupEntryActivity::class.java
                 )
             )
+
             R.id.floatExpendButton -> startActivity(
                 Intent(
                     this@MainActivity,
                     FloatExpandActivity::class.java
                 )
             )
+
             R.id.floatExpendBaseDemo -> startActivity(
                 Intent(
                     this@MainActivity,
                     ExpendBaseDemoActivity::class.java
                 )
             )
+
             R.id.frsFloatExpendDemo -> startActivity(
                 Intent(
                     this@MainActivity,
                     FrsFloatEntranceActivity::class.java
                 )
             )
+
             R.id.carouselFloat -> startActivity(
                 Intent(
                     this@MainActivity,
                     CarouselDemoActivity::class.java
                 )
             )
+
             R.id.naturalAlphaDemo -> startActivity(
                 Intent(
                     this@MainActivity,
                     NaturalAlphaActivity::class.java
                 )
             )
+
             R.id.iconSizeExpend -> startActivity(
                 Intent(
                     this@MainActivity,
                     ExpendBoxActivity::class.java
                 )
             )
+
             R.id.emotionLabel -> startActivity(
                 Intent(
                     this@MainActivity,
                     EmotionLabelActivity::class.java
                 )
             )
+
             R.id.eggFalling -> startActivity(
                 Intent(
                     this@MainActivity,
                     FallingActivity::class.java
                 )
             )
+
             R.id.pathAnimator -> startActivity(
                 Intent(
                     this@MainActivity,
                     PathAnimatorActivity::class.java
                 )
             )
+
             R.id.spreadButton -> startActivity(
                 Intent(
                     this@MainActivity,
