@@ -5,6 +5,21 @@
       <entry key="app">
         <State />
       </entry>
+      <entry key="lib_common">
+        <State />
+      </entry>
+      <entry key="module_animations">
+        <State />
+      </entry>
+      <entry key="module_components">
+        <State />
+      </entry>
+      <entry key="module_layout">
+        <State />
+      </entry>
+      <entry key="module_main">
+        <State />
+      </entry>
     </value>
   </component>
 </project>

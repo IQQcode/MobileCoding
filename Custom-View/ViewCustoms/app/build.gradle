@@ -37,6 +37,14 @@ android {
 
 dependencies {
 
+    if (!isDebug) {
+        implementation project(':lib_common')
+        implementation project(':module_main')
+        implementation project(':module_layout')
+        implementation project(':module_components')
+        implementation project(':module_animations')
+    }
+
     // Navigation
     implementation 'androidx.navigation:navigation-fragment:2.6.0'
 

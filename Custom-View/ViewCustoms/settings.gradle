@@ -14,5 +14,11 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
+
 rootProject.name = "ViewCustoms"
 include ':app'
+include ':lib_common'
+include ':module_main'
+include ':module_layout'
+include ':module_components'
+include ':module_animations'
