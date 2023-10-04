@@ -13,11 +13,12 @@ class ArrayDemoTest {
 
     @Test
     fun add() {
-        val demo = ArrayDemo()
-        println("add = " + demo.add())
+        val demo = Person("tom", 18)
+        println("name = ${demo.name}   age = ${demo.age} ")
     }
 
     @Test
     fun remove() {
+        println("hello kotlin")
     }
 }
