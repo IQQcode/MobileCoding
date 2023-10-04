@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.alibaba.android.arouter.launcher.ARouter
 import top.iqqcode.viewcustoms.anima.alpha.NaturalAlphaActivity
 import top.iqqcode.viewcustoms.databinding.ActivityMainBinding
 import top.iqqcode.viewcustoms.edittext.CustomTextActivity
@@ -124,12 +125,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 )
             )
 
-            R.id.eggFalling -> startActivity(
-                Intent(
-                    this@MainActivity,
-                    FallingActivity::class.java
-                )
-            )
+            R.id.eggFalling -> {
+                // startActivity(Intent(this@MainActivity, FallingActivity::class.java))
+                // 应用内简单的跳转(通过URL跳转在'进阶用法'中)
+                ARouter.getInstance().build("/animations/ModuleAnimationMainActivity").navigation()
+            }
 
             R.id.pathAnimator -> startActivity(
                 Intent(

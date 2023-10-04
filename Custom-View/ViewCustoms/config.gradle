@@ -1,6 +1,8 @@
 ext {
     // 组件独立调试开关, 每次更改值后要同步工程
-    isDebug = true
+    isDebug = false
+    isRelease = !isDebug
+
     app_android = [
             // 编译 SDK 版本
             compileSdk: 34,
@@ -35,6 +37,7 @@ ext {
             // Fresco
             "fresco": 'com.facebook.fresco:fresco:2.6.0'
     ]
+
     libARouter = 'com.alibaba:arouter-api:1.5.2'
     libARouterCompiler = 'com.alibaba:arouter-compiler:1.5.2'
     libGson = 'com.google.code.gson:gson:2.8.9'

@@ -12,9 +12,6 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/lib_common" />
             <option value="$PROJECT_DIR$/module_animations" />
-            <option value="$PROJECT_DIR$/module_components" />
-            <option value="$PROJECT_DIR$/module_layout" />
-            <option value="$PROJECT_DIR$/module_main" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />

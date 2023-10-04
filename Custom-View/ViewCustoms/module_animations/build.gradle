@@ -1,7 +1,7 @@
-//plugins {
-//    id 'com.android.application'
-//    id 'org.jetbrains.kotlin.android'
-//}
+plugins {
+    id 'kotlin-kapt'
+    id 'org.jetbrains.kotlin.android'
+}
 
 // 注意gradle.properties中的数据类型都是String类型，使用其他数据类型需要自行转换
 if (isDebug.toBoolean()) {
@@ -11,7 +11,6 @@ if (isDebug.toBoolean()) {
     // 构建后输出 ARR 包
     apply plugin: 'com.android.library'
 }
-apply plugin: 'org.jetbrains.kotlin.android'
 
 
 android {
@@ -28,6 +27,18 @@ android {
         versionName app_android.versionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+
+        kapt {
+            arguments {
+                arg("AROUTER_MODULE_NAME": project.getName())
+            }
+        }
     }
 
     buildTypes {
@@ -63,9 +74,13 @@ android {
 
 dependencies {
 
-    if (!isDebug) {
+    if (true) {
         implementation project(':lib_common')
+        kapt libARouterCompiler
     }
+
+    implementation 'com.google.dagger:hilt-android:2.40.1'
+    annotationProcessor 'com.google.dagger:hilt-compiler:2.40.1'
 
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.9.0'
